@@ -8,6 +8,7 @@ AVARE-App integrates AVARE-Manager and AVARE-BOX-PROJECT.
 Basic setup to get started:
 - run `npm install` in AVARE-App folder (make sure you have nodejs and npm installed)
 - open android folder in Android Studio
+- do NOT update gradle when asked by Android Studio. This will currently cause problems when syncing the project. We will address this in a later update.
 - Sync the project (you may get several "missing platform" or "NDK not configured" messages - in this case just click the "Install missing platform" link provided with the message)
 
 For JS Development:
