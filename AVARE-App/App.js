@@ -35,6 +35,8 @@ import InfoScreen from './src/views/informative/InfoScreen';
 import PrivacyStatement from './src/views/informative/PrivacyStatement';
 import SideBar from './src/views/_shared/SideBar';
 
+import AppIntro from './src/views/welcome/AppIntro';
+
 //Import Redux and React-Redux
 import { Provider as StoreProvider } from 'react-redux'
 import { combineReducers, createStore, applyMiddleware } from 'redux'
@@ -77,6 +79,9 @@ const MainStack = createDrawerNavigator(
         Privacy: {
             screen: PrivacyStatement
         },
+//        Intro: {
+//                    screen: AppIntro
+//        },
 //        Info: {
 //            screen: InfoScreen
 //        },
@@ -118,6 +123,9 @@ const RootStack = createSwitchNavigator(
         },
         Transfer: {
             screen: TransferProfile,
+        },
+        Intro: {
+            screen: AppIntro
         },
     },
     {

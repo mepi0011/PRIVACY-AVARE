@@ -42,7 +42,7 @@ class LoadingScreen extends React.Component {
           console.log("Test: " + result);
 
           if (result) {
-            this.props.navigation.navigate('Main');
+            this.props.navigation.navigate('Intro');
           }
         })
         .catch((err) => {

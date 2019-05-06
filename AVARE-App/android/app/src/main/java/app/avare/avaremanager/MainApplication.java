@@ -32,6 +32,8 @@ import app.avare.avarebox.delegate.MyTaskDescriptionDelegate;
 import app.virtualhook.BuildConfig;
 import jonathanfinerty.once.Once;
 
+import com.BV.LinearGradient.LinearGradientPackage;
+
 public class MainApplication extends Application implements ReactApplication {
 
     private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
@@ -49,7 +51,8 @@ public class MainApplication extends Application implements ReactApplication {
                     new ReactNativeContacts(),
                     new RNFSPackage(),
                     new VectorIconsPackage(),
-                    new AvareBoxPackage()
+                    new AvareBoxPackage(),
+                    new LinearGradientPackage()
             );
         }
     };
