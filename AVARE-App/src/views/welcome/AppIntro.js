@@ -5,6 +5,7 @@ import { StyleSheet, View, Dimensions, Image, ImageBackground } from 'react-nati
 import { withTheme, Button, Text, Title, Paragraph } from 'react-native-paper';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { connect } from 'react-redux';
+import Icon from 'react-native-ionicons';
 //import LinearGradient from 'react-native-linear-gradient';
 
 
@@ -30,7 +31,7 @@ class AppIntro extends React.Component {
   _renderItem = (item) => {
     return (
       <View style={styles.slide}>
-        <ImageBackground source={require('./Background.png')} style={{width: '100%', height: '100%', alignItems: 'center'}}>
+        <ImageBackground source={require('../../../assets/Intro_Background.png')} style={{width: '100%', height: '100%', alignItems: 'center'}}>
             <Image source={item.image} />
             <Text style={styles.title}>{item.title}</Text>
             <Text style={styles.text}>{item.text}</Text>
@@ -38,31 +39,62 @@ class AppIntro extends React.Component {
       </View>
     );
   }
-//  _renderSkipButton = () => {
-//    return (
-//      <View style={styles.buttonCircle}>
-//          <Image source={require} />
-//      </View>
-//    );
-//  }
-
+  _renderNextButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Icon
+          name="arrow-forward"
+          color="rgba(255, 255, 255, .9)"
+          size={24}
+          style={{ backgroundColor: 'transparent' }}
+        />
+      </View>
+    );
+  }
+  _renderSkipButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Icon
+          name="close"
+          color="rgba(255, 255, 255, .9)"
+          size={24}
+          style={{ backgroundColor: 'transparent' }}
+        />
+      </View>
+    );
+  }
+  _renderDoneButton = () => {
+    return (
+      <View style={styles.buttonCircle}>
+        <Icon
+          name="checkmark"
+          color="rgba(255, 255, 255, .9)"
+          size={24}
+          style={{ backgroundColor: 'transparent' }}
+        />
+      </View>
+    );
+  }
 
 
   render() {
     //If false show the Intro Slides
     if (this.state.showRealApp) {
       //Real Application
-      return (
-        <View
-          style={{
-            marginTop: 360,
-            flexDirection: 'row',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
-          <Button mode='contained' onPress={() => { this.props.navigation.navigate('Main') }}>Zum Hauptmenü</Button>
-        </View>
+      return(
+        this.props.navigation.navigate('Main')
       );
+//      return (
+//        <View
+//          style={{
+//            marginTop: 360,
+//            flexDirection: 'row',
+//            justifyContent: 'center',
+//            alignItems: 'center'
+//          }}>
+//          <Button mode='contained' onPress={() => { this.props.navigation.navigate('Main') }}>Zum Hauptmenü</Button>
+//        </View>
+//      );
     } else {
       //Intro slides
       return (
@@ -72,7 +104,9 @@ class AppIntro extends React.Component {
           onDone={this._onDone} //Handler for the done On last slide
           showSkipButton={true}
           onSkip={this._onSkip}
-//          renderSkipButton={this._renderSkipButton}
+          renderNextButton={this._renderNextButton}
+          renderSkipButton={this._renderSkipButton}
+          renderDoneButton={this._renderDoneButton}
         />
       );
     }
@@ -100,23 +134,23 @@ const styles = StyleSheet.create({
 //    backgroundColor: 'black',
   },
   text: {
-    flex: 2,
+//    flex: 2,
     color: '#000000',
     fontSize: 14,
     textAlign: 'center',
 //    marginTop: 50,
-    paddingVertical: 10,
+    paddingVertical: 20,
     paddingHorizontal: 16,
 //    backgroundColor: 'red',
   },
   title: {
-    flex: 1,
+//    flex: 1,
     fontSize: 20,
     fontWeight: 'bold',
     color: '#000000',
 //    backgroundColor: 'blue',
     textAlign: 'center',
-    marginTop: 10,
+    marginTop: 1,
   },
 });
 
@@ -127,7 +161,7 @@ const slides = [
     titleStyle: styles.title,
     text: 'Die App für eine zentrale und übersichtliche Verwaltung deiner Datenschutzpräferenzen.',
     textStyle: styles.text,
-    image: require('./Intro_1.png'),
+    image: require('../../../assets/Intro_1.png'),
     imageStyle: styles.image,
 //    backgroundColor: '#78B7DA',
   },
@@ -137,7 +171,7 @@ const slides = [
     titleStyle: styles.title,
     text: 'Füge Apps hinzu. Lege fest, welche Apps auf welche Daten zugreifen können.Genieße Datensicherheit.',
     textStyle: styles.text,
-    image: require('./Intro_2.png'),
+    image: require('../../../assets/Intro_2.png'),
     imageStyle: styles.image,
   },
   {
@@ -146,7 +180,7 @@ const slides = [
     titleStyle: styles.title,
     text: 'AVARE kümmert sich um die Durchsetzung deiner Präferenzen, auch auf anderen Geräten.',
     textStyle: styles.text,
-    image: require('./Intro_3.png'),
+    image: require('../../../assets/Intro_3.png'),
     imageStyle: styles.image,
   },
 ];
