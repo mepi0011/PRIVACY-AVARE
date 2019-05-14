@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58927314-f872-47cc-b5fa-cab6773842f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_Background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_6.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/assets/Intro_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/assets/Intro_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/assets/Intro_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_3.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/Background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_3.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,24 +19,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/_shared/SideBar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="810">
-              <caret line="54" column="77" selection-start-line="54" selection-start-column="77" selection-end-line="54" selection-end-column="77" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/WelcomeScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="946">
-              <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/LoadingScreen.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -50,8 +31,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="97" column="12" lean-forward="true" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
+            <state relative-caret-position="174">
+              <caret line="134" column="22" lean-forward="true" selection-start-line="134" selection-start-column="22" selection-end-line="134" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -368,10 +349,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/styles/Avare_Logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="97" column="12" lean-forward="true" selection-start-line="97" selection-start-column="12" selection-end-line="97" selection-end-column="12" />
+        <state relative-caret-position="174">
+          <caret line="134" column="22" lean-forward="true" selection-start-line="134" selection-start-column="22" selection-end-line="134" selection-end-column="22" />
         </state>
       </provider>
     </entry>

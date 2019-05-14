@@ -6,6 +6,8 @@ import { withTheme, Button, Text, Title, Paragraph } from 'react-native-paper';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { connect } from 'react-redux';
 import Icon from 'react-native-ionicons';
+
+// Eventuell statt Hintergrundbild einen LinearGradient verwenden
 //import LinearGradient from 'react-native-linear-gradient';
 
 
@@ -15,26 +17,27 @@ class AppIntro extends React.Component {
     super(props);
     this.state = {
       showRealApp: false,
-      //To show the main page of the app
+      //Soll in AsyncStorage gespeichert werden
+      //Wenn die Einführung einmal beendet oder übersprungen wurde
     };
   }
+
+
+  //Festlegen der Funktionalitäten und Layouts der Elemente
+
   _onDone = () => {
-    // After user finished the intro slides. Show real app through
-    // navigation or simply by controlling state
     this.setState({ showRealApp: true });
   };
   _onSkip = () => {
-    // After user skip the intro slides. Show real app through
-    // navigation or simply by controlling state
     this.setState({ showRealApp: true });
   };
   _renderItem = (item) => {
     return (
       <View style={styles.slide}>
         <ImageBackground source={require('../../../assets/Intro_Background.png')} style={{width: '100%', height: '100%', alignItems: 'center'}}>
-            <Image source={item.image} />
-            <Text style={styles.title}>{item.title}</Text>
-            <Text style={styles.text}>{item.text}</Text>
+          <Image style={item.imageStyle} source={item.image} />
+          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.text}>{item.text}</Text>
         </ImageBackground>
       </View>
     );
@@ -76,6 +79,7 @@ class AppIntro extends React.Component {
     );
   }
 
+// Übergabe aller Elemente an die react-native-app-intro Library
 
   render() {
     //If false show the Intro Slides
@@ -84,17 +88,6 @@ class AppIntro extends React.Component {
       return(
         this.props.navigation.navigate('Main')
       );
-//      return (
-//        <View
-//          style={{
-//            marginTop: 360,
-//            flexDirection: 'row',
-//            justifyContent: 'center',
-//            alignItems: 'center'
-//          }}>
-//          <Button mode='contained' onPress={() => { this.props.navigation.navigate('Main') }}>Zum Hauptmenü</Button>
-//        </View>
-//      );
     } else {
       //Intro slides
       return (
@@ -113,11 +106,7 @@ class AppIntro extends React.Component {
   }
 }
 const styles = StyleSheet.create({
-//  mainContent: {
-//    flex: 1,
-//    alignItems: 'center',
-//    justifyContent: 'space-around',
-//  },
+
   buttonCircle: {
     width: 40,
     height: 40,
@@ -127,30 +116,33 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   image: {
-    flex: 3,
+    flex: 6,
 //    margin: 150,
     width: Dimensions.get('window').width,
     height: undefined,
-//    backgroundColor: 'black',
+  },
+  imageDetail: {
+    flex: 100,
+    width: 0.65*Dimensions.get('window').width,
+    height: undefined,
+    marginTop: 30,
   },
   text: {
-//    flex: 2,
+    flex: 1,
     color: '#000000',
     fontSize: 14,
     textAlign: 'center',
-//    marginTop: 50,
-    paddingVertical: 20,
+    marginBottom: 100,
+//    paddingVertical: 20,
     paddingHorizontal: 16,
-//    backgroundColor: 'red',
   },
   title: {
-//    flex: 1,
+    flex: 1,
     fontSize: 20,
     fontWeight: 'bold',
     color: '#000000',
-//    backgroundColor: 'blue',
     textAlign: 'center',
-    marginTop: 1,
+    marginTop: 15,
   },
 });
 
@@ -182,6 +174,21 @@ const slides = [
     textStyle: styles.text,
     image: require('../../../assets/Intro_3.png'),
     imageStyle: styles.image,
+  },
+  {
+    key: 's4',
+    image: require('../../../assets/Intro_4.png'),
+    imageStyle: styles.imageDetail,
+  },
+  {
+    key: 's5',
+    image: require('../../../assets/Intro_5.png'),
+    imageStyle: styles.imageDetail,
+  },
+  {
+    key: 's6',
+    image: require('../../../assets/Intro_6.png'),
+    imageStyle: styles.imageDetail,
   },
 ];
 
