@@ -73,11 +73,19 @@ class WelcomeScreen extends React.Component {
                 <Title style={{ textAlign: 'center' }}>Willkommen zu Avare</Title>
 
                 <Paragraph style={{ paddingLeft: 16, paddingRight: 16, textAlign: 'center' }}>
-                    Scheinbar wird die App zum ersten Mal genutzt.
+                    Avare befindet sich derzeit in aktiver Entwicklung. Du kannst mit dieser Testversion an der Entwicklung teilhaben und uns unterstützen indem du Feedback gibst.
+                    Besuche die Entwickler-Community unter https://github.com/privacy-avare/PRIVACY-AVARE.
                 </Paragraph>
-                <Paragraph style={{ paddingLeft: 16, paddingRight: 16, textAlign: 'center' }}>Du kannst ein neues Einstellungs-Profil erstellen,
-                    oder deine Avare-Einstellungen von einem anderen Gerät synchronisieren.
+                <Paragraph style={{ paddingLeft: 16, paddingRight: 16, textAlign: 'center' }}>
+                    Bisher ist in der öffentlichen Testversion ein Kontakte-Filter implementiert, mit dem du den Zugriff auf das Addressbuch kontrollieren kannst.
                 </Paragraph>
+                {/* <Paragraph style={{ paddingLeft: 16, paddingRight: 16, textAlign: 'center' }}>Du kannst ein neues Einstellungs-Profil erstellen, */}
+                    {/* oder deine Avare-Einstellungen von einem anderen Gerät synchronisieren. */}
+                {/* </Paragraph> */}
+                <Paragraph style={{ paddingLeft: 16, paddingRight: 16, textAlign: 'center' }}>
+                    Mit Klick auf "Neues Profil" wir ein neues Einstellungs-Profil erstellt.
+                </Paragraph>
+
 
                 <View style={{ marginTop: 16, flexDirection: 'row', justifyContent: 'center', alignItems: 'center'}}>
                     <Button mode='contained' onPress={() => { this.initProfile() }}>Neues Profil</Button>

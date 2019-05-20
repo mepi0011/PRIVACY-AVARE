@@ -39,8 +39,8 @@ class PrivacyStatement extends React.Component {
             >
             <HomeHeader />
             <View style={{ padding: 8 }}>
-            <Title>Datenschutzerklärung</Title>
-            <Hyperlink linkDefault={true}><Text>https://www.privacy-avare.de/datenschutz</Text></Hyperlink>
+            <Title>Datenschutzerklärung und Impressum</Title>
+            <Hyperlink linkDefault={true}><Text>https://avare.app/legal/</Text></Hyperlink>
             </View>
             </View>
 
