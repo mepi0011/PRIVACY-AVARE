@@ -39,7 +39,7 @@ class ListCategories extends React.Component {
   //  header: ({ state }) => <HomeHeader onAddCategoryPressed={state.params.onAddCategoryPressed} />,
   //}
   static navigationOptions = ({ navigation }) => {
-    const {state} = navigation;
+    const { state } = navigation;
     return {
       header: state.params ? <HomeHeader onAddCategoryPressed={state.params.onAddCategoryPressed} /> : <HomeHeader />
     }
@@ -158,16 +158,16 @@ class ListCategories extends React.Component {
         {/* TODO: pull this in HomeHeader. Then we also don't have to push functions around */}
         {/* may also fix backdrop issue */}
         <Dialog
-             visible={this.state.dialogVisible}
-             onDismiss={this._hideDialog.bind(this)}>
-            <Dialog.Title>Alert</Dialog.Title>
-            <Dialog.Content>
-              <Paragraph>This is simple dialog</Paragraph>
-            </Dialog.Content>
-            <Dialog.Actions>
-              <Button onPress={this._hideDialog.bind(this)}>Done</Button>
-            </Dialog.Actions>
-          </Dialog>
+          visible={this.state.dialogVisible}
+          onDismiss={this._hideDialog.bind(this)}>
+          <Dialog.Title>Alert</Dialog.Title>
+          <Dialog.Content>
+            <Paragraph>This is simple dialog</Paragraph>
+          </Dialog.Content>
+          <Dialog.Actions>
+            <Button onPress={this._hideDialog.bind(this)}>Done</Button>
+          </Dialog.Actions>
+        </Dialog>
         <FAB
           icon="apps"
           label="Apps verwalten"
