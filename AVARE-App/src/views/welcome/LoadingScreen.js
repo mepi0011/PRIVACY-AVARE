@@ -26,7 +26,7 @@ import { connect } from 'react-redux';
 import { onLoad } from '../../storage/OnLoad';
 
 
-//import { intro } from '../../storage/intro';
+import { intro } from '../../storage/intro';
 
 
 import AsyncStorage from '@react-native-community/async-storage';
@@ -72,7 +72,7 @@ class LoadingScreen extends React.Component {
     } else {
       // check whether local profile is available
 
-      //intro();
+      intro();
       onLoad()
         .then((result) => {
           console.log("Test: " + result);

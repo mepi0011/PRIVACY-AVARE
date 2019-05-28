@@ -34,7 +34,9 @@ import { loadApps } from '../redux/modules/apps/actions';
 
 import AsyncStorage from '@react-native-community/async-storage';
 import { dontShowAgain } from '../redux/modules/disclaimer/action';
-_getMyValue = async () => {
+
+
+/*_getMyValue = async () => {
     console.log("getValue sagt hi");
     try {
         console.log("Wert lesen:");
@@ -51,17 +53,17 @@ _getMyValue = async () => {
             if ((const value = await AsyncStorage.getItem("visible?")) = false) {
                 console.log("richtig");
                 //  store.dispatch(dontShowAgain());
-            }*/
+            }
     } catch (e) {
         console.log("Fehler aufgetreten:" + e);
     }
 
     console.log("async Storage geladen und verarbeitet");
 
-}
+}*/
 
 export const onLoad = () => {
-    this._getMyValue();
+    //this._getMyValue();
     return readJsonFile()
         .then((contents) => {
             preferenceObject = JSON.parse(contents);

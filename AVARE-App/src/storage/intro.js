@@ -3,20 +3,17 @@ import { store } from '../../App'
 import AsyncStorage from '@react-native-community/async-storage';
 import { dontShowAgain } from '../redux/modules/disclaimer/action';
 
-export let intro = () => {
+export let intro = async () => {
     console.log("intro Funktion sagt HI");
     try {
         console.log("Wert lesen:");
-        let value = await AsyncStorage.getItem("visible?");
-         console.log(value + " gelesener Wert");
-        
-        /*if (value == false) {
-            console.log("Value ist richtig geladen sehr gut");
+        let value = await AsyncStorage.getItem("disclaimer");
+        console.log(value);
+
+        if (value == "nicht mehr zeigen!") {
+            console.log("Disclaimer wird nicht mehr gezeigt");
+            store.dispatch(dontShowAgain());
         }
-        if ((const value = await AsyncStorage.getItem("visible?")) = false) {
-                console.log("richtig");
-                store.dispatch(dontShowAgain());
-            }*/
     } catch (e) {
         console.log("Fehler aufgetreten:" + e);
     }

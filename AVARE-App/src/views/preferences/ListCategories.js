@@ -93,7 +93,7 @@ class ListCategories extends React.Component {
   _hideDisclaimer = async () => {
     try {
       console.log("Wert schreiben")
-      await AsyncStorage.setItem("disclaimer", "Hallo aus async storage!")
+      await AsyncStorage.setItem("disclaimer", "nicht mehr zeigen!")
       console.log("Müsste gehen");
     } catch (e) {
       console.log(e);
@@ -260,8 +260,8 @@ class ListCategories extends React.Component {
                 console.log("Don t show again Button gedrückt");
                 console.log("Wert schreiben:");
                 this._hideDisclaimer();
-                console.log("fertig. Jetzt Wert lesen:");
-                this._getMyValue();
+                  /*console.log("fertig. Jetzt Wert lesen:");
+                this._getMyValue();*/
 
               }
               }>
