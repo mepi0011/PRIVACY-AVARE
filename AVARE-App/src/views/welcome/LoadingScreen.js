@@ -25,6 +25,14 @@ import { withTheme, Title } from 'react-native-paper';
 import { connect } from 'react-redux';
 import { onLoad } from '../../storage/OnLoad';
 
+
+//import { intro } from '../../storage/intro';
+
+
+import AsyncStorage from '@react-native-community/async-storage';
+import { dontShowAgain } from '../../redux/modules/disclaimer/action';
+
+
 class LoadingScreen extends React.Component {
   constructor(props) {
     super(props);
@@ -33,10 +41,38 @@ class LoadingScreen extends React.Component {
     //deleteJsonFile();
 
     //is store active? If not, search local file
+
+    // Check local async Storage if Disclaimer and Intro show are dismissed
+
+    /*_getMaValue = async () => {
+      console.log("Async Laden im Loading Screen says HI")
+      try {
+        const value = await AsyncStorage.getItem("visible?");
+        console.log(value);
+        if (value == "false") {
+          console.log("Wert wurde als false gelesen");
+        }
+        if (value = null) {
+          this.props.dispatch(dontShowAgain());
+        }
+      } catch (e) {
+        console.log(e);
+      }
+
+      console.log('async Storage geladen und verarbeitet')
+
+    }
+    console.log("GUTEN TAG ");
+    this._getMaValue();*/
+
+
+
     if (this.props.categories != undefined && this.props.categories.length != 0) {
       this.props.navigation.navigate('Main')
     } else {
       // check whether local profile is available
+
+      //intro();
       onLoad()
         .then((result) => {
           console.log("Test: " + result);
@@ -50,8 +86,8 @@ class LoadingScreen extends React.Component {
           // Go to welcome screen
           console.log('No Profile, go to welcome');
           this.props.navigation.navigate('Welcome');
-      
-          
+
+
         })
     }
   }
@@ -59,7 +95,7 @@ class LoadingScreen extends React.Component {
   render() {
     const { colors } = this.props.theme;
     return (
-      <View style={{backgroundColor: colors.primary, flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <View style={{ backgroundColor: colors.primary, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Title>AVARE lädt ...</Title>
       </View>
     )
@@ -69,7 +105,8 @@ class LoadingScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    profile: state.communication.profile
+    profile: state.communication.profile,
+    disclaimer: state.disclaimer
 
   }
 }

@@ -30,8 +30,14 @@ import {
 import { Dialog, Paragraph, Button, withTheme, FAB, Divider, List, TouchableRipple } from 'react-native-paper';
 import { withNavigation } from 'react-navigation';
 
+import AsyncStorage from '@react-native-community/async-storage';
+
+
 import { connect } from 'react-redux';
 import HomeHeader from '../_shared/HomeHeader';
+
+import { dontShowAgain } from '../../redux/modules/disclaimer/action';
+
 // import InstalledApps from 'react-native-installed-packages';
 
 class ListCategories extends React.Component {
@@ -47,7 +53,13 @@ class ListCategories extends React.Component {
   constructor(props) {
     super(props);
 
+    //async storage lesen
+
     this.state = {
+      //disclaimerVisible: true,
+
+      // Hier async storage  und als state einfügen. 
+
       dialogVisible: false,
       newCategoryName: '',
     }
@@ -74,6 +86,66 @@ class ListCategories extends React.Component {
 
   }
 
+  //_showDisclaimer() {
+  //  this.setState({ disclaimerVisible: true })
+  //}
+
+  _hideDisclaimer = async () => {
+    try {
+      console.log("Wert schreiben")
+      await AsyncStorage.setItem("disclaimer", "Hallo aus async storage!")
+      console.log("Müsste gehen");
+    } catch (e) {
+      console.log(e);
+    }
+
+    console.log('Wert in async Storage geschrieben')
+  }
+
+  _getMyValue = async () => {
+    console.log("getValueListCategories sagt hi");
+    try {
+      console.log("Wert lesen:");
+      let value = await AsyncStorage.getItem("disclaimer");
+      console.log("Wert:");
+      console.log(value + " ist der Text");
+      if (value == false) {
+        console.log("Value ist richtig geladen omg");
+      }
+      //if (value = "false") {
+      // this.props.dispatch(dontShowAgain());
+      //}
+    } catch (e) {
+      console.log("Fehler aufgetreten");
+    }
+
+    console.log('async Storage geladen und verarbeitet')
+
+  }
+  /*_hideDisclaimer() {
+    this.props.disclaimer.disclaimerVisible = false
+  }*/
+
+  /*_storeData = async () => {
+    try {
+      await AsyncStorage.setItem("disclaimerVisible", true)
+    } catch (err) {
+      console.log(err);
+    }
+  } */
+
+  /*_getData = async () => {
+    try {
+      const value = await AsyncStorage.getItem('disclaimerVisible')
+      if (value !== null) {
+        // value previously stored
+      }
+    } catch (e) {
+      // error reading value
+    }
+  }*/
+
+
   // clear text input when keyboard hides
   _keyboardDidHide() {
     this._textInput.setNativeProps({ text: '' });
@@ -85,6 +157,7 @@ class ListCategories extends React.Component {
 
 
   render() {
+
     const { colors } = this.props.theme;
     return (
       <View style={{ backgroundColor: colors.background, flex: 1 }}>
@@ -157,9 +230,51 @@ class ListCategories extends React.Component {
         </ScrollView>
         {/* TODO: pull this in HomeHeader. Then we also don't have to push functions around */}
         {/* may also fix backdrop issue */}
+
+
         <Dialog
+          title="Disclaimer"
+          //this.props.disclaimer....
+          // vielleicht hier async storage abfragen ? ...
+          visible={this.props.disclaimer.disclaimerVisible} //this.props.disclaimer.disclaimerVisible
+          dismissable={false}>
+          <Dialog.Title>Disclaimer</Dialog.Title>
+          <Dialog.Content>
+            <Paragraph>Die App befindet sich im frühen Entwicklungsstadium</Paragraph>
+          </Dialog.Content>
+          <Dialog.Actions>
+            <Button
+              onPress={() => {
+                this.props.dispatch(dontShowAgain())
+                console.log("OK Button gedrückt, nichts passiert.");
+                //this._hideDisclaimer.bind(this)   //wieso .bind(this) ?
+
+              }}>
+              OK
+            </Button>
+
+            <Button
+              onPress={() => {
+                this.props.dispatch(dontShowAgain())
+
+                console.log("Don t show again Button gedrückt");
+                console.log("Wert schreiben:");
+                this._hideDisclaimer();
+                console.log("fertig. Jetzt Wert lesen:");
+                this._getMyValue();
+
+              }
+              }>
+              don t show again
+              </Button>
+          </Dialog.Actions>
+        </Dialog>
+
+
+        <Dialog
+          //title="Alert"  !!!!  bei onDismiss={this._hideDialog.bind(this)} ?
           visible={this.state.dialogVisible}
-          onDismiss={this._hideDialog.bind(this)}>
+          onDismiss={null}>
           <Dialog.Title>Alert</Dialog.Title>
           <Dialog.Content>
             <Paragraph>This is simple dialog</Paragraph>
@@ -196,9 +311,11 @@ const mapStateToProps = (state) => {
       predefinedCategories.push(categories[i]);
     }
   }
+  console.log(state);
   return {
     ownCategories,
-    predefinedCategories
+    predefinedCategories,
+    disclaimer: state.disclaimer
   };
 }
 
