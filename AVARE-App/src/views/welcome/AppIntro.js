@@ -161,9 +161,9 @@ const slides = [
     key: 's2',
     title: 'Bequem Daten schützen',
     titleStyle: styles.title,
-    text: 'Füge Apps hinzu. Lege fest, welche Apps auf welche Daten zugreifen können.Genieße Datensicherheit.',
+    text: 'Füge Apps hinzu. Lege fest, welche Apps auf welche Daten zugreifen können. Genieße Datensicherheit.',
     textStyle: styles.text,
-    image: require('../../../assets/Intro_2.png'),
+    image: require('../../../assets/Intro_2.png'), //Icon made by Freepik from www.flaticon.com, Icon made by geotatah from www.flaticon.com
     imageStyle: styles.image,
   },
   {
@@ -172,7 +172,7 @@ const slides = [
     titleStyle: styles.title,
     text: 'AVARE kümmert sich um die Durchsetzung deiner Präferenzen, auch auf anderen Geräten.',
     textStyle: styles.text,
-    image: require('../../../assets/Intro_3.png'),
+    image: require('../../../assets/Intro_3.png'), //Icon made by Icongeek26 from www.flaticon.com, Icon made by Smashicons from www.flaticon.com
     imageStyle: styles.image,
   },
   {
