@@ -29,13 +29,9 @@ import {
 } from 'react-native';
 import { Dialog, Paragraph, Button, withTheme, FAB, Divider, List, TouchableRipple } from 'react-native-paper';
 import { withNavigation } from 'react-navigation';
-
 import AsyncStorage from '@react-native-community/async-storage';
-
-
 import { connect } from 'react-redux';
 import HomeHeader from '../_shared/HomeHeader';
-
 import { dontShowAgain } from '../../redux/modules/disclaimer/action';
 
 // import InstalledApps from 'react-native-installed-packages';
@@ -56,10 +52,6 @@ class ListCategories extends React.Component {
     //async storage lesen
 
     this.state = {
-      //disclaimerVisible: true,
-
-      // Hier async storage  und als state einfügen. 
-
       dialogVisible: false,
       newCategoryName: '',
     }
@@ -86,65 +78,17 @@ class ListCategories extends React.Component {
 
   }
 
-  //_showDisclaimer() {
-  //  this.setState({ disclaimerVisible: true })
-  //}
-
   _hideDisclaimer = async () => {
     try {
       console.log("Wert schreiben")
       await AsyncStorage.setItem("disclaimer", "nicht mehr zeigen!")
-      console.log("Müsste gehen");
+
     } catch (e) {
       console.log(e);
     }
 
     console.log('Wert in async Storage geschrieben')
   }
-
-  _getMyValue = async () => {
-    console.log("getValueListCategories sagt hi");
-    try {
-      console.log("Wert lesen:");
-      let value = await AsyncStorage.getItem("disclaimer");
-      console.log("Wert:");
-      console.log(value + " ist der Text");
-      if (value == false) {
-        console.log("Value ist richtig geladen omg");
-      }
-      //if (value = "false") {
-      // this.props.dispatch(dontShowAgain());
-      //}
-    } catch (e) {
-      console.log("Fehler aufgetreten");
-    }
-
-    console.log('async Storage geladen und verarbeitet')
-
-  }
-  /*_hideDisclaimer() {
-    this.props.disclaimer.disclaimerVisible = false
-  }*/
-
-  /*_storeData = async () => {
-    try {
-      await AsyncStorage.setItem("disclaimerVisible", true)
-    } catch (err) {
-      console.log(err);
-    }
-  } */
-
-  /*_getData = async () => {
-    try {
-      const value = await AsyncStorage.getItem('disclaimerVisible')
-      if (value !== null) {
-        // value previously stored
-      }
-    } catch (e) {
-      // error reading value
-    }
-  }*/
-
 
   // clear text input when keyboard hides
   _keyboardDidHide() {
@@ -234,9 +178,7 @@ class ListCategories extends React.Component {
 
         <Dialog
           title="Disclaimer"
-          //this.props.disclaimer....
-          // vielleicht hier async storage abfragen ? ...
-          visible={this.props.disclaimer.disclaimerVisible} //this.props.disclaimer.disclaimerVisible
+          visible={this.props.disclaimer.disclaimerVisible}
           dismissable={false}>
           <Dialog.Title>Disclaimer</Dialog.Title>
           <Dialog.Content>
@@ -246,9 +188,7 @@ class ListCategories extends React.Component {
             <Button
               onPress={() => {
                 this.props.dispatch(dontShowAgain())
-                console.log("OK Button gedrückt, nichts passiert.");
-                //this._hideDisclaimer.bind(this)   //wieso .bind(this) ?
-
+                console.log("OK Button gedrückt.");
               }}>
               OK
             </Button>
@@ -256,23 +196,18 @@ class ListCategories extends React.Component {
             <Button
               onPress={() => {
                 this.props.dispatch(dontShowAgain())
-
-                console.log("Don t show again Button gedrückt");
-                console.log("Wert schreiben:");
+                console.log("Don't show again Button gedrückt");
                 this._hideDisclaimer();
-                  /*console.log("fertig. Jetzt Wert lesen:");
-                this._getMyValue();*/
-
               }
               }>
-              don t show again
+              don't show again
               </Button>
           </Dialog.Actions>
         </Dialog>
 
 
         <Dialog
-          //title="Alert"  !!!!  bei onDismiss={this._hideDialog.bind(this)} ?
+          //title="Alert" 
           visible={this.state.dialogVisible}
           onDismiss={null}>
           <Dialog.Title>Alert</Dialog.Title>

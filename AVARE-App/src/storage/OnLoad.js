@@ -32,38 +32,8 @@ import { readJsonFile } from './RNFSControl'
 import { loadCategories } from '../redux/modules/categories/actions';
 import { loadApps } from '../redux/modules/apps/actions';
 
-import AsyncStorage from '@react-native-community/async-storage';
-import { dontShowAgain } from '../redux/modules/disclaimer/action';
-
-
-/*_getMyValue = async () => {
-    console.log("getValue sagt hi");
-    try {
-        console.log("Wert lesen:");
-        let value = await AsyncStorage.getItem("disclaimer");
-        let value2;
-        console.log(value + " gelesener Wert und " + value2);
-        if (value !== null) {
-            console.log("RICHTIG");
-            //store.dispatch(dontShowAgain());
-        }
-        /*if (value == null) {
-            console.log("Value ist richtig geladen sehr gut");
-
-            if ((const value = await AsyncStorage.getItem("visible?")) = false) {
-                console.log("richtig");
-                //  store.dispatch(dontShowAgain());
-            }
-    } catch (e) {
-        console.log("Fehler aufgetreten:" + e);
-    }
-
-    console.log("async Storage geladen und verarbeitet");
-
-}*/
 
 export const onLoad = () => {
-    //this._getMyValue();
     return readJsonFile()
         .then((contents) => {
             preferenceObject = JSON.parse(contents);

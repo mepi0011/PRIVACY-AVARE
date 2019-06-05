@@ -10,7 +10,6 @@ const initialState = {
 
 
 export default function reducer(state = initialState, action) {
-    //console.log("disclaimer reducer says HI!s")
     if (action.type === HIDE) {
         return {
             disclaimerVisible: action.payload

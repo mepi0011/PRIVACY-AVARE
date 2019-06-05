@@ -24,13 +24,7 @@ import { View, Image } from 'react-native';
 import { withTheme, Title } from 'react-native-paper';
 import { connect } from 'react-redux';
 import { onLoad } from '../../storage/OnLoad';
-
-
 import { intro } from '../../storage/intro';
-
-
-import AsyncStorage from '@react-native-community/async-storage';
-import { dontShowAgain } from '../../redux/modules/disclaimer/action';
 
 
 class LoadingScreen extends React.Component {
@@ -41,30 +35,6 @@ class LoadingScreen extends React.Component {
     //deleteJsonFile();
 
     //is store active? If not, search local file
-
-    // Check local async Storage if Disclaimer and Intro show are dismissed
-
-    /*_getMaValue = async () => {
-      console.log("Async Laden im Loading Screen says HI")
-      try {
-        const value = await AsyncStorage.getItem("visible?");
-        console.log(value);
-        if (value == "false") {
-          console.log("Wert wurde als false gelesen");
-        }
-        if (value = null) {
-          this.props.dispatch(dontShowAgain());
-        }
-      } catch (e) {
-        console.log(e);
-      }
-
-      console.log('async Storage geladen und verarbeitet')
-
-    }
-    console.log("GUTEN TAG ");
-    this._getMaValue();*/
-
 
 
     if (this.props.categories != undefined && this.props.categories.length != 0) {
