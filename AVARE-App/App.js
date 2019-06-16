@@ -42,6 +42,10 @@ import { combineReducers, createStore, applyMiddleware } from 'redux'
 //Import reducers and middleware + on action to track the network
 import communication from './src/redux/modules/communication/reducer'
 import network from './src/redux/modules/network/reducer'
+
+import initialState from './src/redux/modules/disclaimer/reducer'
+import disclaimer from './src/redux/modules/disclaimer/reducer'
+
 import apps from './src/redux/modules/apps/reducer'
 import categories from './src/redux/modules/categories/reducer'
 import fetchMiddleware from './src/redux/middleware/fetchMiddleware'
@@ -57,7 +61,7 @@ import AvareBoxStartScreen from './src/views/preliminary/AvareBoxStartScreen';
 export const SERVER = 'http://193.196.36.83:8443' // IP + Port of the host, or  http://localhost:8443 for testing on pc
 
 //Setting up the store
-const reducers = combineReducers({ communication: communication, network: network, apps: apps, categories: categories });
+const reducers = combineReducers({ communication: communication, network: network, apps: apps, categories: categories, disclaimer: disclaimer });
 export const store = createStore(reducers, applyMiddleware(fetchMiddleware));
 const unsubscribe = store.subscribe(() => console.log(store.getState()))
 
@@ -77,21 +81,21 @@ const MainStack = createDrawerNavigator(
         Privacy: {
             screen: PrivacyStatement
         },
-//        Info: {
-//            screen: InfoScreen
-//        },
-//        ShowFile: {
-//            screen: ShowJsonFile
-//        },
-//        TestHome: {
-//            screen: HomeScreen,
-//        },
-//        TestItems: {
-//            screen: Items,
-//        },
-//        TestTransfer: {
-//            screen: TransferScreen,
-//        },
+        //        Info: {
+        //            screen: InfoScreen
+        //        },
+        //        ShowFile: {
+        //            screen: ShowJsonFile
+        //        },
+        //        TestHome: {
+        //            screen: HomeScreen,
+        //        },
+        //        TestItems: {
+        //            screen: Items,
+        //        },
+        //        TestTransfer: {
+        //            screen: TransferScreen,
+        //        },
         AvareBox: {
             screen: AvareBoxStartScreen
         }

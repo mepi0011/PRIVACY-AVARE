@@ -24,6 +24,8 @@ import { View, Image } from 'react-native';
 import { withTheme, Title } from 'react-native-paper';
 import { connect } from 'react-redux';
 import { onLoad } from '../../storage/OnLoad';
+import { intro } from '../../storage/intro';
+
 
 class LoadingScreen extends React.Component {
   constructor(props) {
@@ -33,10 +35,14 @@ class LoadingScreen extends React.Component {
     //deleteJsonFile();
 
     //is store active? If not, search local file
+
+
     if (this.props.categories != undefined && this.props.categories.length != 0) {
       this.props.navigation.navigate('Main')
     } else {
       // check whether local profile is available
+
+      intro();
       onLoad()
         .then((result) => {
           console.log("Test: " + result);
@@ -50,8 +56,8 @@ class LoadingScreen extends React.Component {
           // Go to welcome screen
           console.log('No Profile, go to welcome');
           this.props.navigation.navigate('Welcome');
-      
-          
+
+
         })
     }
   }
@@ -59,7 +65,7 @@ class LoadingScreen extends React.Component {
   render() {
     const { colors } = this.props.theme;
     return (
-      <View style={{backgroundColor: colors.primary, flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <View style={{ backgroundColor: colors.primary, flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Title>AVARE lädt ...</Title>
       </View>
     )
@@ -69,7 +75,8 @@ class LoadingScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    profile: state.communication.profile
+    profile: state.communication.profile,
+    disclaimer: state.disclaimer
 
   }
 }
