@@ -33,9 +33,8 @@ export const LOAD_PREFERENCES = 'communication/LOAD_PREFERENCES';
 export const LOAD_PREFERENCES_SUCCESS = 'communication/LOAD_PREFERENCES_S';
 export const LOAD_PREFERENCES_FAIL = 'communication/LOAD_PREFERENCES_F';
 
-import {SERVER} from '../../../../App';
-
-
+import {SERVER} from '../../../server/server'
+ 
 export function setTime(time) {
     return {
         type: SET_TIME,

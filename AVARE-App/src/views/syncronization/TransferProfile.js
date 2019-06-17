@@ -22,7 +22,7 @@
 import { View, Text, TextInput, Button, StyleSheet, NetInfo, } from 'react-native';
 import { connect } from 'react-redux'
 import { setProfile, loadPreferences, setTime} from '../../redux/modules/communication/actions'
-import { onConnectivityChange } from '../../../App'
+import {onConnectivityChange} from '../../functions/Connection'
 import {getISODate} from '../../functions/getIsoDate'
 
 import {writeJsonFile} from '../../storage/RNFSControl' //'../features/Storage/RNFSControl';
