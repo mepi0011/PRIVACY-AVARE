@@ -34,14 +34,15 @@ export let settingsLive = [
     name: 'Standort',
     description: 'Deinen aktuellen Standort verfolgen.',
     icon: 'location-on',
-    implemented: false,
+    implemented: true,
   },
   {
     key: 'camera', // TODO: camera and mic in JSON
     name: 'Kamera und Mikrofon',
     description: 'Bild und Ton aufnehmen.',
     icon: 'camera',
-    implemented: false,
+    implemented: true,
+    doubleFilter: true,
   },
   {
     key: 'internet', // Todo: internet, bluetooth and nfc in JSON

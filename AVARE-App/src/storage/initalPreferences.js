@@ -40,10 +40,16 @@ export default initialPreferences = {
             status: "inherit"
         },
         camera: {
-            status: "inherit"
+            status: "inherit",
+            filterSettings: {
+                censored: "hard"
+            }
         },
         mic: {
-            status: "inherit"
+            status: "inherit",
+            filterSettings: {
+                noise: "hard"
+            }
         },
         environment: {
             status: "inherit"

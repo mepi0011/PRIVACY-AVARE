@@ -40,6 +40,10 @@ export const UPDATE_STATUS_APP = 'apps/updateStatus'
 
 export const UPDATE_LOCATION_APP  = 'apps/updateLocation'
 
+export const UPDATE_CAMERA_APP  = 'apps/updateCamera'
+
+export const UPDATE_MICROPHONE_APP = 'apps/updateMicrophone'
+
 export const ADD_HORIZONTAL_CALENDAR  = 'apps/addHorizontalCalendar'
 
 export const REMOVE_HORIZONTAL_CALENDAR  = 'apps/removeHorizontalCalendar'
@@ -195,6 +199,26 @@ export function setLocationFilter(_id, value) {
         payload: {
             _id: _id,
             value
+        }
+    }
+}
+
+export function setCameraFilter(_id, setting) {
+    return {
+        type: UPDATE_CAMERA_APP,
+        payload: {
+            _id: _id,
+            setting
+        }
+    }
+}
+
+export function setMicrophoneFilter(_id, setting) {
+    return {
+        type: UPDATE_MICROPHONE_APP,
+        payload: {
+            _id: _id,
+            setting
         }
     }
 }

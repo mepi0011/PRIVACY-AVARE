@@ -21,7 +21,7 @@
 */
 import React from 'react';
 import { View } from 'react-native';
-import { Switch, withTheme, List, RadioButton, IconButton } from 'react-native-paper';
+import { Switch, withTheme, List, RadioButton, IconButton, Text } from 'react-native-paper';
 import PreferencesHeader from '../../_shared/PreferencesHeader';
 import { withNavigation } from 'react-navigation';
 
@@ -138,6 +138,8 @@ class GenericPreferences extends React.Component {
                     this.props.navigation.navigate('LocationFilter', { contextID: this.state.contextID, context: this.state.context })
                   } else if (this.state.settingKey == "calendar") {
                     this.props.navigation.navigate('CalendarFilter', { contextID: this.state.contextID, context: this.state.context })
+//                  } else if (this.state.settingKey == "camera") {
+//                    this.props.navigation.navigate('CameraFilter', { contextID: this.state.contextID, context: this.state.context })
                   }
 
                 }}

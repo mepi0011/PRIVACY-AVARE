@@ -32,6 +32,8 @@ import {
     ADD_DEFAULT_CATEGORY,
     RESET_CATEGORIES,
     UPDATE_LOCATION_CATEGORY,
+    UPDATE_CAMERA_CATEGORY,
+    UPDATE_MICROPHONE_CATEGORY,
     ADD_HORIZONTAL_CALENDAR,
     REMOVE_HORIZONTAL_CALENDAR,
     ADD_VERTICAL_CALENDAR,
@@ -179,6 +181,30 @@ export default function reducer (state = initialState, action) {
 
                 var newCategory = _.cloneDeep(category) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep 
                 newCategory.settings.location.filterSettings.distance = action.payload.value
+
+                return newCategory;
+            })
+
+        case UPDATE_CAMERA_CATEGORY:
+            return state.map((category) => {
+                if (category._id !== action.payload._id) {
+                    return category;
+                }
+
+                var newCategory = _.cloneDeep(category) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep
+                newCategory.settings.camera.filterSettings.censored = action.payload.setting
+
+                return newCategory;
+            })
+
+        case UPDATE_MICROPHONE_CATEGORY:
+            return state.map((category) => {
+                if (category._id !== action.payload._id) {
+                    return category;
+                }
+
+                var newCategory = _.cloneDeep(category) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep
+                newCategory.settings.mic.filterSettings.noise = action.payload.setting
 
                 return newCategory;
             })

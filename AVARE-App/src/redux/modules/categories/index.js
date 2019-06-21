@@ -32,6 +32,18 @@ export function createCategory(_id) {
                     distance: 50,
                 },
             },
+            camera: {
+                status: "filtered",
+                filterSettings: {
+                    censored: "hard"
+                },
+            },
+            mic: {
+                status: "filtered",
+                filterSettings: {
+                    noise: "hard"
+                },
+            },
             contacts: {
                 status: "filtered",
                 filterSettings: {

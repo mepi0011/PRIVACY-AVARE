@@ -64,6 +64,18 @@ export function createApp(_id, category_id) {
                     distance: 50,
                 },
             },
+            camera: {
+                status: "filtered",
+                filterSettings: {
+                    censored: 'hard'
+                }
+            },
+            mic: {
+                status: "filtered",
+                filterSettings: {
+                    noise: 'hard'
+                }
+            },
             contacts: {
                 status: "filtered",
                 filterSettings: {

@@ -34,6 +34,8 @@ import {
     ADD_VERTICAL_CALENDAR,
     REMOVE_VERTICAL_CALENDAR,
     UPDATE_LOCATION_APP,
+    UPDATE_CAMERA_APP,
+    UPDATE_MICROPHONE_APP,
     UPDATE_STATUS_APP,
 
 } from './actions';
@@ -186,6 +188,30 @@ export default function reducer (state = initialState, action) {
 
                 var newApp = _.cloneDeep(app) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep 
                 newApp.settings.location.filterSettings.distance = action.payload.value
+
+                return newApp;
+            })
+
+        case UPDATE_CAMERA_APP:
+            return state.map((app) => {
+                if (app._id !== action.payload._id) {
+                    return app;
+                }
+
+                var newApp = _.cloneDeep(app) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep
+                newApp.settings.camera.filterSettings.censored = action.payload.setting
+
+                return newApp;
+            })
+
+        case UPDATE_MICROPHONE_APP:
+            return state.map((app) => {
+                if (app._id !== action.payload._id) {
+                    return app;
+                }
+
+                var newApp = _.cloneDeep(app) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep
+                newApp.settings.mic.filterSettings.noise = action.payload.setting
 
                 return newApp;
             })
