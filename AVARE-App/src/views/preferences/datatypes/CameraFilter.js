@@ -70,9 +70,9 @@ class CameraFilter extends React.Component {
                 { this.setState({ isSwitchOn: !isSwitchOn});
 //                console.log('current State: ' + this.state.isSwitchOn);
                  if (this.state.isSwitchOn) {
-                    this.setCameraFilter('hard');
+                    this.setCameraFilter('none');
                  } else {
-                 this.setCameraFilter('none');
+                 this.setCameraFilter('hard');
                  }
                 }
               }

@@ -199,7 +199,7 @@ export default function reducer (state = initialState, action) {
                 }
 
                 var newApp = _.cloneDeep(app) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep
-                newApp.settings.camera.filterSettings.censored = action.payload.setting
+                newApp.settings.camera.filterSettings = action.payload.setting
 
                 return newApp;
             })
@@ -211,7 +211,7 @@ export default function reducer (state = initialState, action) {
                 }
 
                 var newApp = _.cloneDeep(app) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep
-                newApp.settings.mic.filterSettings.noise = action.payload.setting
+                newApp.settings.mic.filterSettings = action.payload.setting
 
                 return newApp;
             })

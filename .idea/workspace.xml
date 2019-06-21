@@ -2,25 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58927314-f872-47cc-b5fa-cab6773842f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/avare.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraFilter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraPreferences.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/MicrophoneFilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/storage/preferenceDescriptions.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/storage/preferenceDescriptions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/preferences/ListPreferences.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/ListPreferences.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/preferences/PreferenceStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/PreferenceStack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/GenericPreferences.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/GenericPreferences.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/LocationFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/LocationFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/MicrophoneFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/MicrophoneFilter.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +18,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="194" column="58" selection-start-line="194" selection-start-column="58" selection-end-line="194" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraFilter.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="64" column="154" selection-start-line="64" selection-start-column="154" selection-end-line="64" selection-end-column="154" />
+            <state relative-caret-position="347">
+              <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/reducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="213" column="50" selection-start-line="213" selection-start-column="50" selection-end-line="213" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -42,25 +47,25 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/MicrophoneFilter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="426">
-              <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
+            <state relative-caret-position="266">
+              <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/MicrophoneFilter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraPreferences.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="-315">
               <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
             </state>
           </provider>
@@ -121,15 +126,15 @@
         <option value="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/GenericPreferences.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/storage/preferenceDescriptions.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/LocationFilter.js" />
-        <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/actions.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/actions.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/index.js" />
-        <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/reducer.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/views/preferences/PreferenceStack.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraPreferences.js" />
-        <option value="$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/index.js" />
+        <option value="$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js" />
+        <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js" />
+        <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/reducer.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraFilter.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/MicrophoneFilter.js" />
       </list>
@@ -294,6 +299,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="23" width="1260" height="737" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49722221" visible="true" weight="0.3292978" />
@@ -536,38 +542,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/MicrophoneFilter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="426">
-          <caret line="87" column="36" selection-start-line="87" selection-start-column="36" selection-end-line="87" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="206" column="24" selection-start-line="206" selection-start-column="24" selection-end-line="206" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="335">
           <caret line="43" column="28" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/reducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="213" column="81" selection-start-line="213" selection-start-column="81" selection-end-line="213" selection-end-column="81" />
         </state>
       </provider>
     </entry>
@@ -578,17 +556,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraFilter.js">
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraPreferences.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="64" column="154" selection-start-line="64" selection-start-column="154" selection-end-line="64" selection-end-column="154" />
+        <state relative-caret-position="-315">
+          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraPreferences.js">
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/reducer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="96" column="27" selection-start-line="96" selection-start-column="27" selection-end-line="96" selection-end-column="27" />
+        <state relative-caret-position="279">
+          <caret line="213" column="50" selection-start-line="213" selection-start-column="50" selection-end-line="213" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="194" column="58" selection-start-line="194" selection-start-column="58" selection-end-line="194" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="47" column="33" selection-start-line="47" selection-start-column="33" selection-end-line="47" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CameraFilter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="74" column="43" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/MicrophoneFilter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="74" column="47" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
         </state>
       </provider>
     </entry>

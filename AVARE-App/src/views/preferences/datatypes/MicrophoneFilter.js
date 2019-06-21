@@ -70,9 +70,9 @@ class MicrophoneFilter extends React.Component {
                 { this.setState({ isSwitchOn: !isSwitchOn});
 //                console.log('current State: ' + this.state.isSwitchOn);
                  if (this.state.isSwitchOn) {
-                    this.setMicrophoneFilter('hard');
+                    this.setMicrophoneFilter('none');
                  } else {
-                 this.setMicrophoneFilter('none');
+                 this.setMicrophoneFilter('hard');
                  }
                 }
               }
