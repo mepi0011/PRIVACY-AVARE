@@ -23,9 +23,8 @@ import React, { Component } from 'react';
 import { View, Text, TextInput,StyleSheet, NetInfo, } from 'react-native';
 import { connect } from 'react-redux'
 import { setProfile, loadPreferences, setTime, setPreferences } from '../../redux/modules/communication/actions'
-import { onConnectivityChange } from '../../../App'
+import {onConnectivityChange} from '../../functions/Connection'
 import {getISODate} from '../../functions/getIsoDate'
-
 import {test} from '../../redux/modules/apps/index'
 import { basic, writeJsonFile, deleteFile, readJsonFile } from '../../storage/RNFSControl';
 import { addCategorie, updateSettingStatusOfCategory, addDefaultCategory } from '../../redux/modules/categories/actions';

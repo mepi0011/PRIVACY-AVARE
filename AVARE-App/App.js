@@ -51,26 +51,13 @@ import categories from './src/redux/modules/categories/reducer'
 import fetchMiddleware from './src/redux/middleware/fetchMiddleware'
 import { setConnectivity } from './src/redux/modules/network/actions'
 import TransferProfile from './src/views/syncronization/TransferProfile';
-import HomeScreen from './src/views/preliminary/HomeScreen';
-import Items from './src/views/preliminary/Items';
-import TransferScreen from './src/views/preliminary/TransferScreen';
 import AvareBoxStartScreen from './src/views/preliminary/AvareBoxStartScreen';
-
-//TODO: I think this should be setup somewhere else (server, store and network), and not exported from here
-//Constant Adress of the Server
-export const SERVER = 'http://193.196.36.83:8443' // IP + Port of the host, or  http://localhost:8443 for testing on pc
 
 //Setting up the store
 const reducers = combineReducers({ communication: communication, network: network, apps: apps, categories: categories, disclaimer: disclaimer });
 export const store = createStore(reducers, applyMiddleware(fetchMiddleware));
 const unsubscribe = store.subscribe(() => console.log(store.getState()))
 
-//Track network 
-export const onConnectivityChange = (reach) => {
-    console.log('Network change');
-    console.log(reach)
-    store.dispatch(setConnectivity(reach));
-}
 
 // The main app: containing all links to screens in the drawer
 const MainStack = createDrawerNavigator(

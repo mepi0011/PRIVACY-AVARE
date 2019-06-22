@@ -31,7 +31,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { getProfile, uploadProfile, setPreferences} from '../../redux/modules/communication/actions'
-import {onConnectivityChange} from '../../../App'
+import {onConnectivityChange} from '../../functions/Connection'
 import { getEncryptedPreferences } from '../../encryption/Encryptor';
 
 import { Container, Header, Body, Left, Right, Icon, Title, Button} from 'native-base';

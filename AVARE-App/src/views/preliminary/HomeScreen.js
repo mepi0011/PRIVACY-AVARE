@@ -22,10 +22,8 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, NetInfo, CheckBox, ToastAndroid} from 'react-native';
 import { connect } from 'react-redux';
-
 import { setConnectivity } from '../../redux/modules/network/actions';
-import { onConnectivityChange} from '../../../App'
-
+import {onConnectivityChange} from '../../functions/Connection'
 import { Container, Header, Body, Left, Right, Icon, Title, Button} from 'native-base';
 
 class HomeScreen extends Component {
