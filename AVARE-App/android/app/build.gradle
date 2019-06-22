@@ -50,6 +50,7 @@ android {
 }
 
 dependencies {
+    compile project(':@react-native-community_async-storage')
 
     compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':lib')

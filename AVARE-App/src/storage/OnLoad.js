@@ -32,8 +32,8 @@ import { readJsonFile } from './RNFSControl'
 import { loadCategories } from '../redux/modules/categories/actions';
 import { loadApps } from '../redux/modules/apps/actions';
 
-export const onLoad = () => {
 
+export const onLoad = () => {
     return readJsonFile()
         .then((contents) => {
             preferenceObject = JSON.parse(contents);

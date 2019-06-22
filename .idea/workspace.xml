@@ -2,12 +2,235 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58927314-f872-47cc-b5fa-cab6773842f1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/bug_report.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/ISSUE_TEMPLATE/feature_request.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/action.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-App/src/storage/intro.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/ConfigParserAndWriter.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/ConfigParserAndWriter/ConfigParserAndWriter.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/ConfigParserAndWriter/ConfigParserAndWriter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/ConfigParserAndWriter/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/StateMachine.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/src/androidTest/java/app/avare/statemachinelib/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/src/main/java/app/avare/statemachinelib/StateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/src/main/java/app/avare/statemachinelib/enums/CameraState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/src/main/java/app/avare/statemachinelib/enums/MicrophoneState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/src/test/java/app/avare/statemachinelib/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/StateMachine/statemachinelib/statemachinelib.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/apiLogScreen.PNG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogFileWriter/LogWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_AudioRecord.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_AudioRecord_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_Camera.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_Demo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_MediaRecorder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_MediaRecorder_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_MediaRecorder_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_camera2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/Hook_camera2_1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/plugin/apiLogPlugin/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/java/app/avare/yahfa/HookInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/jni/Android.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/jni/Application.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/jni/helloJni.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/ConfigParserAndWriter/ConfigParserAndWriter.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/ConfigParserAndWriter/ConfigParserAndWriter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/ConfigParserAndWriter/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/StateMachine/StateMachine.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/StateMachine/StateMachine.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/StateMachine/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/plugin/cameraFilterPlugin/api/camera/Hook_Camera_open.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/plugin/cameraFilterPlugin/api/camera/Hook_Camera_setPreviewCallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/plugin/cameraFilterPlugin/api/camera/Hook_Camera_setPreviewDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/plugin/cameraFilterPlugin/api/camera/Hook_Camera_setPreviewTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/plugin/cameraFilterPlugin/api/camera/Hook_Camera_startPreview.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/plugin/cameraFilterPlugin/api/camera/Hook_Camera_takePicture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/plugin/cameraFilterPlugin/util/ByteCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/plugin/cameraFilterPlugin/util/FaceDetection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/java/app/avare/yahfa/HookInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/jni/Android.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/jni/Application.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/jni/helloJni.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/ConfigParser/src/main/java/app/avare/lib/configparser/FileWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin.apk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/ConfigParserAndWriter/ConfigParserAndWriter.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/ConfigParserAndWriter/ConfigParserAndWriter.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/ConfigParserAndWriter/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/StateMachine/StateMachine.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/StateMachine/StateMachine.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/StateMachine/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/micFilterPlugin.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/settings.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/java/app/avare/plugin/micFilterPlugin/Hook_MediaRecorder_setOutPutFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/java/app/avare/plugin/micFilterPlugin/Hook_MediaRecorder_start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/java/app/avare/plugin/micFilterPlugin/Hook_MediaRecorder_stop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/java/app/avare/yahfa/HookInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/jni/Android.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/jni/Application.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/jni/helloJni.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/res/raw/silence.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/res/raw/swoosh.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/ConfigParser-debug/ConfigParser-debug.aar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/ConfigParser-debug/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/java/cat/ereza/customactivityoncrash/CheckHookError.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/java/cat/ereza/customactivityoncrash/CustomActivityOnCrash.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/java/cat/ereza/customactivityoncrash/activity/DefaultErrorActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/java/cat/ereza/customactivityoncrash/config/CaocConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/java/cat/ereza/customactivityoncrash/provider/CaocInitProvider.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/res/drawable-hdpi/customactivityoncrash_error_image.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/res/layout/customactivityoncrash_default_error_activity.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/res/values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocLibrary/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/src/main/java/app/avare/plugin/caocPlugin/Hook_Activity_onCreate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/src/main/java/app/avare/yahfa/HookInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/src/main/jni/Android.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/src/main/jni/Application.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/src/main/jni/helloJni.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/caocPlugin/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/java/app/avare/plugin/microphoneHookPlugin/Hook_MediaRecorder_setOutPutFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/java/app/avare/plugin/microphoneHookPlugin/Hook_MediaRecorder_start.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/java/app/avare/plugin/microphoneHookPlugin/Hook_MediaRecorder_stop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/java/app/avare/plugin/microphoneHookPlugin/swoosh.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/java/app/avare/yahfa/HookInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/jni/Android.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/jni/Application.mk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/jni/helloJni.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/res/raw/silence.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/microphoneHookPlugin/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/androidTest/java/de/fzi/zielke/statemachine/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/main/java/de/fzi/zielke/statemachine/FileReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/main/java/de/fzi/zielke/statemachine/FileWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/main/java/de/fzi/zielke/statemachine/JSONParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/main/java/de/fzi/zielke/statemachine/StateMachine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/main/java/de/fzi/zielke/statemachine/enums/CameraState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/main/java/de/fzi/zielke/statemachine/enums/MicrophoneState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/statemachine/src/test/java/de/fzi/zielke/statemachine/StateMachineTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVARE-App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/assets/Intro_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/assets/Intro_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/assets/Intro_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/assets/Intro_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/android/YAHFA/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/android/YAHFA/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/android/app/src/main/assets/index.android.bundle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/android/app/src/main/assets/index.android.bundle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/android/app/src/main/java/app/avare/avaremanager/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/android/app/src/main/java/app/avare/avaremanager/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/android/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/android/lib/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/android/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/android/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/release/AvareApp.apk" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/release/AvareApp.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/src/storage/OnLoad.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/storage/OnLoad.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/informative/PrivacyStatement.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/informative/PrivacyStatement.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/preferences/ListCategories.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/preferences/ListCategories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/LoadingScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/welcome/LoadingScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/WelcomeScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/welcome/WelcomeScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/.idea/caches/build_file_checksums.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/.idea/caches/gradle_models.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/.idea/runConfigurations.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/ConfigParser/src/main/java/app/avare/lib/configparser/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/ConfigParser/src/main/java/app/avare/lib/configparser/FileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/ConfigParser/src/main/java/app/avare/lib/configparser/JSONParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/ConfigParser/src/main/java/app/avare/lib/configparser/JSONParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/configparser/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/contactsFilterPlugin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/contactsFilterPlugin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/contactsFilterPlugin/contactsFilterPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/apiLogPlugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/contactsFilterPlugin/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/micFilterPlugin/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/locationFilterPlugin/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/locationFilterPlugin/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/locationFilterPlugin/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/locationFilterPlugin/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/locationFilterPlugin/contactsFilterPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/apiLogPlugin/benchmarkPlugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/locationFilterPlugin/local.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/locationFilterPlugin/locationFilterPlugin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Plug-ins/cameraFilterPlugin/cameraFilterPlugin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Plug-ins/locationFilterPlugin/src/main/res/raw/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/YAHFA/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/YAHFA/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/contactsFilterPlugin/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/contactsFilterPlugin/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/demoHookPlugin/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/demoHookPlugin/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/demoHookPlugin/src/main/java/app/avare/plugin/demeHookPlugin/Hook_AssetManager_open.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/demoHookPlugin/src/main/java/app/avare/plugin/demoHookPlugin/Hook_AssetManager_open.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/demoHookPlugin/src/main/java/app/avare/plugin/demeHookPlugin/Hook_File_init.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/demoHookPlugin/src/main/java/app/avare/plugin/demoHookPlugin/Hook_File_init.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/demoHookPlugin/src/main/java/app/avare/plugin/demeHookPlugin/Hook_URL_openConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/demoHookPlugin/src/main/java/app/avare/plugin/demoHookPlugin/Hook_URL_openConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/lib/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/lib/src/main/jni/Application.mk" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/lib/src/main/jni/Application.mk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-Box-Project/AvareBox/settings.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,54 +240,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2148">
+              <caret line="181" selection-start-line="181" selection-end-line="181" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/AVARE-App/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+            <state relative-caret-position="-1497">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="174" column="99" selection-start-line="174" selection-start-column="99" selection-end-line="174" selection-end-column="99" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/ContactsFilter.js">
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/action.js">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/LocationFilter.js">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="219">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            <state relative-caret-position="74">
+              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/ListPreferences.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-422">
-              <caret line="30" column="6" selection-start-line="30" selection-start-column="6" selection-end-line="30" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/preferenceDescriptions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/actions.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -101,7 +311,9 @@
         <option value="$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/LocationFilter.js" />
         <option value="$PROJECT_DIR$/AVARE-App/src/storage/preferenceDescriptions.js" />
+        <option value="$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js" />
         <option value="$PROJECT_DIR$/AVARE-App/App.js" />
+        <option value="$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js" />
       </list>
     </option>
   </component>
@@ -142,6 +354,46 @@
               <item name="avare" type="462c0819:PsiDirectoryNode" />
               <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avare" type="462c0819:PsiDirectoryNode" />
+              <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avare" type="462c0819:PsiDirectoryNode" />
+              <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avare" type="462c0819:PsiDirectoryNode" />
+              <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avare" type="462c0819:PsiDirectoryNode" />
+              <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="disclaimer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avare" type="462c0819:PsiDirectoryNode" />
+              <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avare" type="b2602c69:ProjectViewProjectNode" />
@@ -237,7 +489,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.3364341" />
+      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.33488372" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
@@ -343,21 +595,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_3.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_1.png" />
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_3.png" />
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_2.png" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_11.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_11.png" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/android/app/src/main/java/app/avare/avaremanager/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -457,10 +701,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/initalPreferences.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="45" column="28" selection-start-line="45" selection-start-column="28" selection-end-line="45" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/apps/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/AVARE-App/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="32" column="52" selection-start-line="32" selection-start-column="52" selection-end-line="32" selection-end-column="52" />
+        <state relative-caret-position="-1497">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/action.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/actions.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2148">
+          <caret line="181" selection-start-line="181" selection-end-line="181" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
         </state>
       </provider>
     </entry>

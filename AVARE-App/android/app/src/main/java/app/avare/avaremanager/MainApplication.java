@@ -1,5 +1,7 @@
 package app.avare.avaremanager;
 
+import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -46,6 +48,7 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
+			        new AsyncStoragePackage(),
                     new AppsInfoPackage(),
                     new CalendarEventsPackage(),
                     new ReactNativeContacts(),
