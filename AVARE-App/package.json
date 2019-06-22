@@ -10,7 +10,7 @@
     "gradle": "cd android && .\\gradlew installDebug"
   },
   "dependencies": {
-    "@react-native-community/async-storage": "^1.4.2",
+    "@react-native-community/async-storage": "^1.5.0",
     "lodash": "^4.17.11",
     "native-base": "^2.12.1",
     "react": "16.6.0-alpha.8af6728",

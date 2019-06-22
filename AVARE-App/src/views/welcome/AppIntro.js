@@ -6,6 +6,9 @@ import { withTheme, Button, Text, Title, Paragraph } from 'react-native-paper';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { connect } from 'react-redux';
 import Icon from 'react-native-ionicons';
+import { store } from '../../../App'
+import AsyncStorage from '@react-native-community/async-storage';
+import { hideAppIntro } from '../../redux/modules/disclaimer/action';
 
 // Eventuell statt Hintergrundbild einen LinearGradient verwenden
 //import LinearGradient from 'react-native-linear-gradient';
@@ -17,6 +20,7 @@ class AppIntro extends React.Component {
     super(props);
     this.state = {
       showRealApp: false,
+      introVisible: AsyncStorage.getItem("appIntro"),
       //Soll in AsyncStorage gespeichert werden
       //Wenn die Einführung einmal beendet oder übersprungen wurde
     };
@@ -27,9 +31,13 @@ class AppIntro extends React.Component {
 
   _onDone = () => {
     this.setState({ showRealApp: true });
+    AsyncStorage.setItem("appIntro", "introDone");
+    console.log('AppIntro.js/onDone has written in AS: introdone')
   };
   _onSkip = () => {
     this.setState({ showRealApp: true });
+    AsyncStorage.setItem("appIntro", "introDone");
+    console.log('AppIntro.js/onSkip has written in AS: introdone')
   };
   _renderItem = (item) => {
     return (
@@ -79,9 +87,43 @@ class AppIntro extends React.Component {
     );
   }
 
+// TODO: Wert in AsyncStorage speichern und anfangs auslesen ob intro schonmal durchgelaufen ist.
+// Damit dann "showRealApp verändern und dadurch die untenstehende Logik speisen
+
+
+  getIntroSt = async() => {
+    let value = await AsyncStorage.getItem("appIntro");
+    if (value == "introDone"){
+      console.log("set showRA on false");
+      this.setState({ showRealApp: false });
+    };
+    return;
+  }
+//  getIntroState = async() => {
+//    console.log("Async auslesen in AppIntro.js");
+//    try {
+//        console.log("Wert lesen:");
+//        let value = await AsyncStorage.getItem("appIntro");
+//        console.log(value + "<-gelesener Wert");
+//        if (value == "introDone") {
+//            console.log("Intro wird nicht mehr angezeigt");
+//            store.dispatch(hideAppIntro());
+//            this.setState({ introVisible: false });
+//        } else {
+//            console.log('Intro wird angezeigt');
+//            this.setState({ introVisible: true });
+//        }
+//    } catch (e) {
+//        console.log("Fehler aufgetreten:" + e);
+//    }
+//  };
+
 // Übergabe aller Elemente an die react-native-app-intro Library
 
   render() {
+
+    console.log('IntroVisible: ' + this.state.introVisible)
+//    this.getIntroSt();
     //If false show the Intro Slides
     if (this.state.showRealApp) {
       //Real Application
