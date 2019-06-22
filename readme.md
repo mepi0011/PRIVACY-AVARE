@@ -1,12 +1,10 @@
-Hier sind die Ergebnisse des Projektes AVARE dokumentiert.
+Weiterentwicklung der Ergebnisse des Projektes AVARE.
 Das Projekt wurde von 2016 bis 2019 von der Baden-Württemberg Stiftung gGmbH finanziert,
 die Baden-Württemberg-Stiftung hat der Veröffentlichung der Ergebnisse auf GitHub als Open Source zugestimmt.
 
 Projektpartner:
 - Karlsruher Institut für Technologie (www.kit.edu)
 - FZI Forschungszentrum Informatik (www.fzi.de)
-
-Die Weiterentwicklung läuft inzwischen auf https://github.com/privacy-avare/PRIVACY-AVARE
 
 Veröffentlichungen (u.a.):
 - Alpers, S., Erdogan, E., Gapp, S., Fritsch, A., Miller-Askar, A., Oberweis, A., Schiefer, G., Wagner, M. (2018). PRIVACY – AVARE: Selbstdatenschutz für Bürger mithilfe von Open-Source-Software. In Froscon 2018.
