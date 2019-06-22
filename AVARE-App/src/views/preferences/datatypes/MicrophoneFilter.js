@@ -35,11 +35,10 @@ class MicrophoneFilter extends React.Component {
 
     let contextID = this.props.navigation.state.params.contextID;
     let context = this.props.navigation.state.params.context;
-    let isSwitchOn = false;
     this.state = {
       context,
       contextID,
-      isSwitchOn: false,
+      isSwitchOn: true,
     }
   }
 

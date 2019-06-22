@@ -34,14 +34,14 @@ export function createCategory(_id) {
             },
             camera: {
                 status: "filtered",
-                filterSettings: {
-                    censored: "hard"
+                blockSettings: {
+                    blockStatus: "hard"
                 },
             },
             mic: {
                 status: "filtered",
-                filterSettings: {
-                    noise: "hard"
+                blockSettings: {
+                    blockStatus: "hard"
                 },
             },
             contacts: {

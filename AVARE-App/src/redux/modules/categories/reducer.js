@@ -192,7 +192,7 @@ export default function reducer (state = initialState, action) {
                 }
 
                 var newCategory = _.cloneDeep(category) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep
-                newCategory.settings.camera.filterSettings = action.payload.setting
+                newCategory.settings.camera.blockSettings.blockStatus = action.payload.setting
 
                 return newCategory;
             })
@@ -204,7 +204,7 @@ export default function reducer (state = initialState, action) {
                 }
 
                 var newCategory = _.cloneDeep(category) // TODO: in case of performance issues, one could go the tedious way rather than cloneDeep
-                newCategory.settings.mic.filterSettings = action.payload.setting
+                newCategory.settings.mic.blockSettings.blockStatus = action.payload.setting
 
                 return newCategory;
             })

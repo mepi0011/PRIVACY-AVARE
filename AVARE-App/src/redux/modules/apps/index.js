@@ -66,14 +66,14 @@ export function createApp(_id, category_id) {
             },
             camera: {
                 status: "filtered",
-                filterSettings: {
-                    censored: 'hard'
+                blockSettings: {
+                    blockStatus: 'hard'
                 }
             },
             mic: {
                 status: "filtered",
-                filterSettings: {
-                    noise: 'hard'
+                blockSettings: {
+                    blockStatus: 'hard'
                 }
             },
             contacts: {

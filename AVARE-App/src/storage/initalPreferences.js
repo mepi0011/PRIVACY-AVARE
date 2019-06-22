@@ -41,11 +41,15 @@ export default initialPreferences = {
         },
         camera: {
             status: "inherit",
-            filterSettings: "hard"
+            blockSettings: {
+                blockStatus: "hard"
+            }
         },
         mic: {
             status: "inherit",
-            filterSettings: "hard"
+            blockSettings: {
+                blockStatus: "hard"
+            }
         },
         environment: {
             status: "inherit"
@@ -112,10 +116,16 @@ export default initialPreferences = {
                     status: "enabled"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "enabled"
+                    status: "enabled",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
@@ -182,10 +192,16 @@ export default initialPreferences = {
                     status: "enabled"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "filtered"
@@ -253,10 +269,16 @@ export default initialPreferences = {
                     status: "enabled"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
@@ -324,10 +346,16 @@ export default initialPreferences = {
                     status: "enabled"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
@@ -395,10 +423,16 @@ export default initialPreferences = {
                     status: "enabled"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
@@ -466,10 +500,16 @@ export default initialPreferences = {
                     status: "blocked"
                 },
                 camera: {
-                    status: "enabled"
+                    status: "enabled",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "enabled"
+                    status: "enabled",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "enabled"
@@ -537,10 +577,16 @@ export default initialPreferences = {
                     status: "enabled"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
@@ -608,10 +654,16 @@ export default initialPreferences = {
                     status: "enabled"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
@@ -679,10 +731,16 @@ export default initialPreferences = {
                     status: "enabled"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
@@ -750,10 +808,16 @@ export default initialPreferences = {
                     status: "blocked"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
@@ -821,10 +885,16 @@ export default initialPreferences = {
                     status: "blocked"
                 },
                 camera: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 mic: {
-                    status: "blocked"
+                    status: "blocked",
+                    blockSettings: {
+                        blockStatus: "hard"
+                    }
                 },
                 environment: {
                     status: "blocked"
