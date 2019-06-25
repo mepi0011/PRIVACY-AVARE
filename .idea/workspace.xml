@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58927314-f872-47cc-b5fa-cab6773842f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/AVARE-App/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/action.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/action.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js" beforeDir="false" afterPath="$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,37 +13,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/categories/reducer.js">
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/ListCategories.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2337">
-              <caret line="181" selection-start-line="181" selection-end-line="181" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1447">
-              <caret line="7" selection-start-line="7" selection-end-line="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/action.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-32">
-              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/intro.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+            <state relative-caret-position="773">
+              <caret line="189" column="52" selection-start-line="189" selection-start-column="16" selection-end-line="189" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -55,33 +24,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="126" column="24" lean-forward="true" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
+            <state relative-caret-position="251">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js">
+        <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/intro.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="10" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/OnLoad.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-163" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/ListCategories.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1553">
-              <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -110,6 +63,7 @@
       <find>showreal</find>
       <find>import { store }</find>
       <find>intro</find>
+      <find>asyncstorage.getitem</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/AVARE-App/src/redux/modules/categories</dir>
@@ -200,7 +154,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="redux" type="462c0819:PsiDirectoryNode" />
               <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="apps" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avare" type="462c0819:PsiDirectoryNode" />
+              <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
               <item name="categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avare" type="462c0819:PsiDirectoryNode" />
+              <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="redux" type="462c0819:PsiDirectoryNode" />
+              <item name="modules" type="462c0819:PsiDirectoryNode" />
+              <item name="disclaimer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avare" type="b2602c69:ProjectViewProjectNode" />
@@ -215,6 +187,14 @@
               <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="avare" type="b2602c69:ProjectViewProjectNode" />
+              <item name="avare" type="462c0819:PsiDirectoryNode" />
+              <item name="AVARE-App" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="preferences" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="avare" type="b2602c69:ProjectViewProjectNode" />
@@ -277,7 +257,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.49722221" visible="true" weight="0.3292978" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49722221" visible="true" weight="0.3292978" />
       <window_info id="Structure" order="2" sideWeight="0.50277776" side_tool="true" weight="0.3292978" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Designer" order="4" />
@@ -287,7 +267,7 @@
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="TODO" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="3" visible="true" weight="0.33488372" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="3" visible="true" weight="0.33488372" />
       <window_info anchor="bottom" id="Event Log" order="4" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
@@ -389,9 +369,7 @@
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_1.png" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_3.png" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/Intro_2.png" />
-    <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_1.png" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_11.png" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/android/app/src/main/java/app/avare/avaremanager/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -415,9 +393,7 @@
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/styles/Avare_Logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/assets/Intro_2.png" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/node_modules/react-native-app-intro-slider/AppIntroSlider.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4290">
@@ -514,23 +490,10 @@
         <state relative-caret-position="-106" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/action.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-32">
-          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/action.js" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/datatypes/CalendarItemsFilter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-503" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/ListCategories.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1553">
-          <caret line="172" lean-forward="true" selection-start-line="172" selection-end-line="172" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/OnLoad.js">
@@ -538,24 +501,25 @@
         <state relative-caret-position="-163" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js" />
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/storage/intro.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="15" column="47" lean-forward="true" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AVARE-App/src/redux/modules/disclaimer/reducer.js">
+    <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/preferences/ListCategories.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="10" selection-end-column="25" />
+        <state relative-caret-position="773">
+          <caret line="189" column="52" selection-start-line="189" selection-start-column="16" selection-end-line="189" selection-end-column="52" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AVARE-App/src/views/welcome/AppIntro.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="126" column="24" lean-forward="true" selection-start-line="126" selection-start-column="24" selection-end-line="126" selection-end-column="24" />
+        <state relative-caret-position="251">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
         </state>
       </provider>
     </entry>

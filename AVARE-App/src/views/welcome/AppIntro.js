@@ -20,9 +20,11 @@ class AppIntro extends React.Component {
     super(props);
     this.state = {
       showRealApp: false,
-      introVisible: AsyncStorage.getItem("appIntro"),
+//      introVisible: AsyncStorage.getItem("appIntro"),
       //Soll in AsyncStorage gespeichert werden
       //Wenn die Einführung einmal beendet oder übersprungen wurde
+
+      //wenn es hier nicht funktionert nochmal im RN lifecycle nachschauen ob es eine Funktion gibt die den State vor Render udaten kann.
     };
   }
 
@@ -31,13 +33,15 @@ class AppIntro extends React.Component {
 
   _onDone = () => {
     this.setState({ showRealApp: true });
-    AsyncStorage.setItem("appIntro", "introDone");
-    console.log('AppIntro.js/onDone has written in AS: introdone')
+    this._setIntroState();
+//    this.props.dispatch(hideAppIntro());
+    console.log('AppIntro.js/onDone has written in AS: introDone')
   };
   _onSkip = () => {
     this.setState({ showRealApp: true });
-    AsyncStorage.setItem("appIntro", "introDone");
-    console.log('AppIntro.js/onSkip has written in AS: introdone')
+    this._setIntroState();
+//    this.props.dispatch(hideAppIntro());
+    console.log('AppIntro.js/onSkip has written in AS: introDone')
   };
   _renderItem = (item) => {
     return (
@@ -90,40 +94,41 @@ class AppIntro extends React.Component {
 // TODO: Wert in AsyncStorage speichern und anfangs auslesen ob intro schonmal durchgelaufen ist.
 // Damit dann "showRealApp verändern und dadurch die untenstehende Logik speisen
 
+  _setIntroState = async () => {
+    try {
+      console.log("AI Wert schreiben")
+      await AsyncStorage.setItem("appIntro", "introDone")
 
-  getIntroSt = async() => {
-    let value = await AsyncStorage.getItem("appIntro");
-    if (value == "introDone"){
-      console.log("set showRA on false");
-      this.setState({ showRealApp: false });
-    };
-    return;
+    } catch (e) {
+      console.log(e);
+    }
+
+    console.log('AI Wert in async Storage geschrieben')
   }
-//  getIntroState = async() => {
-//    console.log("Async auslesen in AppIntro.js");
-//    try {
-//        console.log("Wert lesen:");
-//        let value = await AsyncStorage.getItem("appIntro");
-//        console.log(value + "<-gelesener Wert");
-//        if (value == "introDone") {
-//            console.log("Intro wird nicht mehr angezeigt");
-//            store.dispatch(hideAppIntro());
-//            this.setState({ introVisible: false });
-//        } else {
-//            console.log('Intro wird angezeigt');
-//            this.setState({ introVisible: true });
-//        }
-//    } catch (e) {
-//        console.log("Fehler aufgetreten:" + e);
-//    }
-//  };
+
+  _getIntroState = async () => {
+    try {
+      console.log("AI Wert lesen")
+      let value = await AsyncStorage.getItem("appIntro")
+      console.log('AI read value: ' + value)
+
+    } catch (e) {
+      console.log('Fehler unterlaufen in _getIntroState: ' + e);
+    }
+    return value;
+  }
+
+
 
 // Übergabe aller Elemente an die react-native-app-intro Library
 
   render() {
 
-    console.log('IntroVisible: ' + this.state.introVisible)
-//    this.getIntroSt();
+    this._getIntroState();
+    console.log(this._getIntroState())
+    if (this._getIntroState() == "introDone"){
+        this.setState({ showRealApp: true });
+    }
     //If false show the Intro Slides
     if (this.state.showRealApp) {
       //Real Application
