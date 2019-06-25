@@ -40,13 +40,13 @@ export default initialPreferences = {
             status: "inherit"
         },
         camera: {
-            status: "inherit",
+            status: "blocked",
             blockSettings: {
                 blockStatus: "hard"
             }
         },
         mic: {
-            status: "inherit",
+            status: "blocked",
             blockSettings: {
                 blockStatus: "hard"
             }
@@ -122,7 +122,7 @@ export default initialPreferences = {
                     }
                 },
                 mic: {
-                    status: "enabled",
+                    status: "blocked",
                     blockSettings: {
                         blockStatus: "hard"
                     }
@@ -500,13 +500,13 @@ export default initialPreferences = {
                     status: "blocked"
                 },
                 camera: {
-                    status: "enabled",
+                    status: "blocked",
                     blockSettings: {
                         blockStatus: "hard"
                     }
                 },
                 mic: {
-                    status: "enabled",
+                    status: "blocked",
                     blockSettings: {
                         blockStatus: "hard"
                     }

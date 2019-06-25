@@ -146,13 +146,13 @@ class CameraPreferences extends React.Component {
             left={(props) => <RadioButton style={{backgroundColor: 'red'}} status={this.state.setting.status == 'filtered' ? 'checked' : 'unchecked'} />}
             title="Filtern"
             onPress={this.updateCameraPreference.bind(this, 'filtered')}
-            right={(props) =>
-              <IconButton {...props} icon="settings" mode="text" size={20}
-                onPress={() => {
-                  this.props.navigation.navigate('CameraFilter', { contextID: this.state.contextID, context: this.state.context })
-                }}
-              />
-            }
+//            right={(props) =>
+//              <IconButton {...props} icon="settings" mode="text" size={20}
+//                onPress={() => {
+//                  this.props.navigation.navigate('CameraFilter', { contextID: this.state.contextID, context: this.state.context })
+//                }}
+//              />
+//            }
           />
           <List.Item
             left={() => <RadioButton status={this.state.setting.status == 'enabled' ? 'checked' : 'unchecked'} />}
@@ -177,13 +177,13 @@ class CameraPreferences extends React.Component {
             left={(props) => <RadioButton style={{backgroundColor: 'red'}} status={this.state.micSetting.status == 'filtered' ? 'checked' : 'unchecked'} />}
             title="Filtern"
             onPress={this.updateMicrophonePreference.bind(this, 'filtered')}
-            right={(props) =>
-              <IconButton {...props} icon="settings" mode="text" size={20}
-                onPress={() => {
-                  this.props.navigation.navigate('MicrophoneFilter', { contextID: this.state.contextID, context: this.state.context })
-                }}
-              />
-            }
+//            right={(props) =>
+//              <IconButton {...props} icon="settings" mode="text" size={20}
+//                onPress={() => {
+//                  this.props.navigation.navigate('MicrophoneFilter', { contextID: this.state.contextID, context: this.state.context })
+//                }}
+//              />
+//            }
           />
           <List.Item
             left={() => <RadioButton status={this.state.micSetting.status == 'enabled' ? 'checked' : 'unchecked'} />}
