@@ -20,11 +20,6 @@ class AppIntro extends React.Component {
     super(props);
     this.state = {
       showRealApp: false,
-//      introVisible: AsyncStorage.getItem("appIntro"),
-      //Soll in AsyncStorage gespeichert werden
-      //Wenn die Einführung einmal beendet oder übersprungen wurde
-
-      //wenn es hier nicht funktionert nochmal im RN lifecycle nachschauen ob es eine Funktion gibt die den State vor Render udaten kann.
     };
   }
 
@@ -95,27 +90,10 @@ class AppIntro extends React.Component {
 // Damit dann "showRealApp verändern und dadurch die untenstehende Logik speisen
 
   _setIntroState = async () => {
-    try {
+
       console.log("AI Wert schreiben")
       await AsyncStorage.setItem("appIntro", "introDone")
-
-    } catch (e) {
-      console.log(e);
-    }
-
-    console.log('AI Wert in async Storage geschrieben')
-  }
-
-  _getIntroState = async () => {
-    try {
-      console.log("AI Wert lesen")
-      let value = await AsyncStorage.getItem("appIntro")
-      console.log('AI read value: ' + value)
-
-    } catch (e) {
-      console.log('Fehler unterlaufen in _getIntroState: ' + e);
-    }
-    return value;
+      console.log('AI Wert in async Storage geschrieben')
   }
 
 
@@ -124,11 +102,6 @@ class AppIntro extends React.Component {
 
   render() {
 
-    this._getIntroState();
-    console.log(this._getIntroState())
-    if (this._getIntroState() == "introDone"){
-        this.setState({ showRealApp: true });
-    }
     //If false show the Intro Slides
     if (this.state.showRealApp) {
       //Real Application
