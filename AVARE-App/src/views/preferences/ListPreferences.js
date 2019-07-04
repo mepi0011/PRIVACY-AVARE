@@ -67,7 +67,11 @@ class ListPreferences extends React.Component {
                 <List.Item
                   onPress={() => {
                     if (item.implemented) {
-                      this.props.navigation.navigate('Preference', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      if (item.doubleFilter) {
+                        this.props.navigation.navigate('CameraPreferences', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      } else {
+                        this.props.navigation.navigate('Preference', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      }
                     }
                   }}
 
@@ -93,7 +97,12 @@ class ListPreferences extends React.Component {
                 <List.Item
                   onPress={() => {
                     if (item.implemented) {
-                      this.props.navigation.navigate('Preference', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      if (item.doubleFilter) {
+                        this.props.navigation.navigate('CameraPreferences', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      } else {
+                        this.props.navigation.navigate('Preference', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      }
+
                     }
                   }}
                   style={item.implemented ? {} : styleNotImplemented}
@@ -118,7 +127,11 @@ class ListPreferences extends React.Component {
                 <List.Item
                   onPress={() => {
                     if (item.implemented) {
-                      this.props.navigation.navigate('Preference', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      if (item.doubleFilter) {
+                        this.props.navigation.navigate('CameraPreferences', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      } else {
+                        this.props.navigation.navigate('Preference', { context: this.state.context, contextID: this.state.contextID, settingKey: item.key, name: item.name })
+                      }
                     }
                   }}
                   style={item.implemented ? {} : styleNotImplemented}
