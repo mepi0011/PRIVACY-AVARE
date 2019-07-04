@@ -37,6 +37,9 @@ import ContactFieldsFilter from './datatypes/ContactFieldsFilter';
 import ContactItemsFilter from './datatypes/ContactItemsFilter';
 import LocationFilter from './datatypes/LocationFilter';
 import CalendarFilter from './datatypes/CalendarFilter';
+import CameraFilter from './datatypes/CameraFilter';
+import CameraPreferences from './datatypes/CameraPreferences';
+import MicrophoneFilter from './datatypes/MicrophoneFilter';
 import CalendarFieldsFilter from './datatypes/CalendarFieldsFilter';
 import CalendarItemsFilter from './datatypes/CalendarItemsFilter';
 import AppPreferences from './AppPreferences';
@@ -115,6 +118,15 @@ const PreferenceStack = createStackNavigator(
         },
         CalendarItemsFilter: {
             screen: CalendarItemsFilter
+        },
+        CameraFilter: {
+            screen: CameraFilter
+        },
+        CameraPreferences: {
+            screen: CameraPreferences
+        },
+        MicrophoneFilter: {
+            screen: MicrophoneFilter
         },
         AppPreferences: {
             screen: AppPreferences,

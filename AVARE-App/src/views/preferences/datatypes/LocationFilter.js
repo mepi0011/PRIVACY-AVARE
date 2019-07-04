@@ -20,8 +20,8 @@
         limitations under the License.
 */
 import React from 'react';
-import { View, Slider } from 'react-native';
-import { withTheme, Title, Paragraph } from 'react-native-paper';
+import { View, Slider, Text, Dimensions } from 'react-native';
+import { withTheme, Title, Paragraph, Surface } from 'react-native-paper';
 import PreferencesHeader from '../../_shared/PreferencesHeader';
 
 import { setLocationFilter as filterLocationCategory } from '../../../redux/modules/categories/actions';
@@ -45,6 +45,7 @@ class LocationFilter extends React.Component {
   setLocationFilter(value){
     if (this.state.context == "category") {
       this.props.dispatch(filterLocationCategory(this.state.contextID, value));
+      console.log('Location contextID: ' + this.state.contextID)
     } else {
       console.log('setting location filter to ' + value);
       this.props.dispatch(filterLocationApp(this.state.contextID, value));
@@ -66,8 +67,34 @@ class LocationFilter extends React.Component {
     return (
       <View style={{ backgroundColor: colors.background, height: 300 }}>
         <PreferencesHeader title="Standortfilter" />
-        <Paragraph>Standortunschärfe:</Paragraph>
-        <Slider style={{ marginTop: 16 }} value={distance} minimumValue={1} maximumValue={100} step={1} onSlidingComplete={(value) => { this.setLocationFilter(value); }} />
+        <Paragraph style={{paddingHorizontal: 20, paddingVertical: 20}}>Standortunschärfe festlegen</Paragraph>
+        <Slider
+            style={{ marginTop: 16 }}
+            value={distance}
+            minimumValue={1}
+            maximumValue={100}
+            step={1}
+            onSlidingComplete={(value) => { this.setLocationFilter(value); }}
+        />
+        <View style={{width: Dimensions.get('window').width, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20}}>
+            <Text style={{color: '#d3d3d3'}}>{1} km</Text>
+            <Text style={{color: '#d3d3d3'}}>{100} km</Text>
+        </View>
+
+        <View style={{alignItems: 'center', paddingVertical: 20 }}>
+            <Surface style={{
+            padding: 8,
+            height: 80,
+            width: 0.5*Dimensions.get('window').width,
+            alignItems: 'center',
+            justifyContent: 'center',
+            elevation: 6+0.05*distance,
+            }}>
+                <Text style={{fontSize: 24, fontWeight: 'bold' }}> {distance + 'km'} </Text>
+                <Text>Aktuelle Unschärfe</Text>
+            </Surface>
+        </View>
+
       </View>
     );
 
