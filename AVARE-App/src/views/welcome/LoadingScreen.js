@@ -25,6 +25,7 @@ import { withTheme, Title } from 'react-native-paper';
 import { connect } from 'react-redux';
 import { onLoad } from '../../storage/OnLoad';
 import { intro } from '../../storage/intro';
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 class LoadingScreen extends React.Component {
@@ -47,9 +48,20 @@ class LoadingScreen extends React.Component {
         .then((result) => {
           console.log("Test: " + result);
 
-          if (result) {
-            this.props.navigation.navigate('Main');
-          }
+          AsyncStorage.getItem('appIntro').then((value) => {
+            if (value == "introDone") {
+              console.log('Async read in /LoadingScreen: --> intro already done, skip')
+              this.props.navigation.navigate('Main');
+            }
+            else {
+              console.log('Async read in /LoadingScreen: --> intro has to be done')
+              this.props.navigation.navigate('Intro');
+            }
+          });
+
+//          if (result) {
+//            this.props.navigation.navigate('Intro');
+//          }
         })
         .catch((err) => {
           console.log('Der Fehler ist ', err);
