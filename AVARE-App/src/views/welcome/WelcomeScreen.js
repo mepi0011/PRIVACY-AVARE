@@ -31,6 +31,7 @@ import { writeJsonFile } from '../../storage/RNFSControl';
 import { connect } from 'react-redux';
 import uuid from 'uuid/v4';
 import AvareBox from '../../packages/AvareBox';
+import AsyncStorage from '@react-native-community/async-storage';
 
 
 //TODO: hmmm... as the app should also work offline only, we need to think about the purpose of getProfile
@@ -61,7 +62,16 @@ class WelcomeScreen extends React.Component {
         });
         writeJsonFile();
 
-        this.props.navigation.navigate('Main');
+        AsyncStorage.getItem('appIntro').then((value) => {
+          if (value == "introDone") {
+            console.log('Async read in /LoadingScreen: --> intro already done, skip')
+            this.props.navigation.navigate('Main');
+          }
+          else {
+            console.log('Async read in /LoadingScreen: --> intro has to be done')
+            this.props.navigation.navigate('Intro');
+          }
+        });
     }
 
     render() {
