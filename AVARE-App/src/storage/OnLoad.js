@@ -26,7 +26,7 @@ import {
     ToastAndroid,
 } from 'react-native';
 
-import { setProfile, setTime } from '../redux/modules/communication/actions';
+import { setProfile, setTime } from 'avare-sync-client'//'../redux/modules/communication/actions';
 
 import { readJsonFile } from './RNFSControl'
 import { loadCategories } from '../redux/modules/categories/actions';

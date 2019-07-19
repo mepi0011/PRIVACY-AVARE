@@ -93,12 +93,12 @@ const MainStack = createDrawerNavigator(
 //        TestHome: {
 //            screen: HomeScreen,
 //        },
-//        TestItems: {
-//            screen: Items,
-//        },
-//        TestTransfer: {
-//            screen: TransferScreen,
-//        },
+        TestItems: {
+            screen: Items,
+        },
+        TestTransfer: {
+            screen: TransferScreen,
+        },
         AvareBox: {
             screen: AvareBoxStartScreen
         }

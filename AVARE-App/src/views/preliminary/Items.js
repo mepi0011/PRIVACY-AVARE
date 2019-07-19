@@ -30,7 +30,7 @@ import {
   
 } from 'react-native';
 import { connect } from 'react-redux';
-import { getProfile, uploadProfile, setPreferences} from '../../redux/modules/communication/actions'
+import { getProfile, uploadProfile, setPreferences} from 'avare-sync-client'//'../../redux/modules/communication/actions'
 import {onConnectivityChange} from '../../functions/Connection'
 import { getEncryptedPreferences } from '../../encryption/Encryptor';
 

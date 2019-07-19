@@ -20,7 +20,7 @@
         limitations under the License.
 */
 import { Alert, ToastAndroid } from 'react-native';
-import {loadPreferences, LOAD_PREFERENCES_SUCCESS} from '../modules/communication/actions';
+import {loadPreferences, LOAD_PREFERENCES_SUCCESS} from 'avare-sync-client'//'../modules/communication/actions';
 import {setPending} from '../modules/network/actions'
 import { decrypt } from '../../encryption/Encryptor';
 import { loadApps } from '../modules/apps/actions';
@@ -37,7 +37,6 @@ export default function fetchMiddleware({ dispatch, getState }) {
         }
         console.log("Checking connection")
         console.log(getState().network.isOffline)
-
         const [REQUEST, SUCCESS, FAILURE] = types;
 
         if(getState().network.isOffline) {
@@ -81,7 +80,6 @@ export default function fetchMiddleware({ dispatch, getState }) {
                     }
 
                 } else {
-                    
                     if (SUCCESS === LOAD_PREFERENCES_SUCCESS) { // Es wurde erfolgreich eine Preferenz erhalten (alternativ wäre Profil)
                         ToastAndroid.show('Got Preferences', ToastAndroid.SHORT);
                         //console.log(decrypt(payload));

@@ -52,14 +52,14 @@ export default class SideBar extends Component {
                                 let label = (index === 0) ? 'Datenschutzerklärung' : 'Experteneinstellungen'//: 'Über AVARE';
                                 return (<Drawer.Item key={item.key} label={label}
                                     onPress={() => {
-                                        this.props.navigation.navigate('Intro');
+                                        this.props.navigation.navigate(item.routeName);
                                         this.props.navigation.dispatch(DrawerActions.closeDrawer());
                                     }} />)
                             })
                         }
                     </Drawer.Section>
                     
-                    {/*}
+                    {
                     <Drawer.Section title="Testscreens">
                         {
                             preliminarySection.map((item) => {
@@ -71,7 +71,7 @@ export default class SideBar extends Component {
                                     }} />)
                             })
                         }
-                    </Drawer.Section>*/}
+                    </Drawer.Section>}
 
                 </SafeAreaView>
             </ScrollView>

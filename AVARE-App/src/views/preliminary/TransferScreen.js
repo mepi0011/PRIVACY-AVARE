@@ -22,7 +22,7 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput,StyleSheet, NetInfo, } from 'react-native';
 import { connect } from 'react-redux'
-import { setProfile, loadPreferences, setTime, setPreferences } from '../../redux/modules/communication/actions'
+import { setProfile, loadPreferences, setTime, setPreferences, uploadProfile, getProfile } from 'avare-sync-client'//'../../redux/modules/communication/actions'
 import {onConnectivityChange} from '../../functions/Connection'
 import {getISODate} from '../../functions/getIsoDate'
 import {test} from '../../redux/modules/apps/index'
@@ -30,7 +30,7 @@ import { basic, writeJsonFile, deleteFile, readJsonFile } from '../../storage/RN
 import { addCategorie, updateSettingStatusOfCategory, addDefaultCategory } from '../../redux/modules/categories/actions';
 import { createCategory } from '../../redux/modules/categories';
 import { Container, Header, Body, Left, Right, Icon, Title, Button} from 'native-base';
-
+import {store} from '../../../App'
 
 class TransferScreen extends Component {
   
@@ -46,7 +46,6 @@ class TransferScreen extends Component {
     );
   }
 
-  /*
   componentWillMount() {
     this.setState({
       profile: ""
@@ -56,7 +55,7 @@ class TransferScreen extends Component {
       'connectionChange',
       onConnectivityChange
     );
-  }*/
+  }
 
   componentWillUnmount() {
     NetInfo.removeEventListener(
@@ -65,7 +64,6 @@ class TransferScreen extends Component {
     )
   }
 
-  /*
   componentWillReceiveProps(nextProps) {
     if (this.props.profile !== nextProps.profile) {
       this.setState({
@@ -73,7 +71,6 @@ class TransferScreen extends Component {
       })
     }
   }
-  */
 
   onConnectivityChange = (reach) => {
     console.log('Network change');
@@ -107,7 +104,7 @@ class TransferScreen extends Component {
           />
           <Button block onPress={() => {
             this.props.dispatch(setProfile(this.state.profile))
-            //this.props.dispatch(loadPreferences(this.state.profile, getISODate(new Date('01.01.1971')))) //force download of preferences 
+            this.props.dispatch(loadPreferences(this.state.profile, getISODate(new Date('01.01.1971')))) //force download of preferences
             this.props.dispatch(setTime(getISODate(new Date())))
           }}
           >
@@ -155,12 +152,6 @@ class TransferScreen extends Component {
             <Text>Read JSON</Text>
           </Button>
 
-          <Button block onPress={() => {
-            deleteFile('preferences.json');
-          }}
-          >
-            <Text>Delete File</Text>
-          </Button>
 
           <Button block onPress={() => {
             preferenceObject = {
@@ -179,6 +170,23 @@ class TransferScreen extends Component {
           }}
           >
             <Text>Add new</Text>
+          </Button>
+
+          <Button block onPress={() => {
+            storeState = store.getState();
+            this.props.dispatch(uploadProfile(this.state.profile, storeState.communication.time, JSON.stringify(storeState)));
+          }}
+          >
+            <Text>Upload Profile</Text>
+          </Button>
+
+          <Button block onPress={() => {
+
+            this.props.dispatch(getProfile());
+            writeJsonFile();
+          }}
+          >
+            <Text>Create Profile (on Server)</Text>
           </Button>
 
           <View style={styles.infoPanel}>
