@@ -45,9 +45,9 @@ class CameraFilter extends React.Component {
   setCameraFilter(setting){
     if (this.state.context == "category") {
       this.props.dispatch(filterCameraCategory(this.state.contextID, setting));
-      console.log('Camera setting: ' + setting)
+//      console.log('Camera setting: ' + setting)
     } else {
-      console.log('setting app camera filter to ' + setting);
+//      console.log('setting app camera filter to ' + setting);
       this.props.dispatch(filterCameraApp(this.state.contextID, setting));
     }
     writeJsonFile();
@@ -67,7 +67,6 @@ class CameraFilter extends React.Component {
               value = { isSwitchOn }
               onValueChange={() =>
                 { this.setState({ isSwitchOn: !isSwitchOn});
-//                console.log('current State: ' + this.state.isSwitchOn);
                  if (this.state.isSwitchOn) {
                     this.setCameraFilter('none');
                  } else {

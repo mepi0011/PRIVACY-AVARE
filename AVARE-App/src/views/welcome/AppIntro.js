@@ -8,10 +8,6 @@ import { connect } from 'react-redux';
 import Icon from 'react-native-ionicons';
 import { store } from '../../../App'
 import AsyncStorage from '@react-native-community/async-storage';
-import { hideAppIntro } from '../../redux/modules/disclaimer/action';
-
-// Eventuell statt Hintergrundbild einen LinearGradient verwenden
-//import LinearGradient from 'react-native-linear-gradient';
 
 
 
@@ -29,13 +25,11 @@ class AppIntro extends React.Component {
   _onDone = () => {
     this.setState({ showRealApp: true });
     this._setIntroState();
-//    this.props.dispatch(hideAppIntro());
     console.log('AppIntro.js/onDone has written in AS: introDone')
   };
   _onSkip = () => {
     this.setState({ showRealApp: true });
     this._setIntroState();
-//    this.props.dispatch(hideAppIntro());
     console.log('AppIntro.js/onSkip has written in AS: introDone')
   };
   _renderItem = (item) => {
@@ -86,14 +80,10 @@ class AppIntro extends React.Component {
     );
   }
 
-// TODO: Wert in AsyncStorage speichern und anfangs auslesen ob intro schonmal durchgelaufen ist.
-// Damit dann "showRealApp verändern und dadurch die untenstehende Logik speisen
 
   _setIntroState = async () => {
-
-      console.log("AI Wert schreiben")
+      // Wert in den Async Storage schreiben
       await AsyncStorage.setItem("appIntro", "introDone")
-      console.log('AI Wert in async Storage geschrieben')
   }
 
 
@@ -113,8 +103,8 @@ class AppIntro extends React.Component {
       return (
         <AppIntroSlider
           renderItem={this._renderItem}
-          slides={slides} //comming from the JsonArray below
-          onDone={this._onDone} //Handler for the done On last slide
+          slides={slides}
+          onDone={this._onDone}
           showSkipButton={true}
           onSkip={this._onSkip}
           renderNextButton={this._renderNextButton}
@@ -153,7 +143,6 @@ const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: 'center',
     marginBottom: 100,
-//    paddingVertical: 20,
     paddingHorizontal: 16,
   },
   title: {
@@ -175,7 +164,6 @@ const slides = [
     textStyle: styles.text,
     image: require('../../../assets/Intro_1.png'),
     imageStyle: styles.image,
-//    backgroundColor: '#78B7DA',
   },
   {
     key: 's2',

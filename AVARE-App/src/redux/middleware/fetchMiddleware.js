@@ -20,8 +20,8 @@
         limitations under the License.
 */
 import { Alert, ToastAndroid } from 'react-native';
-import {loadPreferences, LOAD_PREFERENCES_SUCCESS} from 'avare-sync-client'//'../modules/communication/actions';
-import {setPending} from '../modules/network/actions'
+import { loadPreferences, LOAD_PREFERENCES_SUCCESS } from 'avare-sync-client'//'../modules/communication/actions';
+import { setPending } from '../modules/network/actions'
 import { decrypt } from '../../encryption/Encryptor';
 import { loadApps } from '../modules/apps/actions';
 import { loadCategories } from '../modules/categories/actions';

@@ -58,10 +58,6 @@ class LoadingScreen extends React.Component {
               this.props.navigation.navigate('Intro');
             }
           });
-
-//          if (result) {
-//            this.props.navigation.navigate('Intro');
-//          }
         })
         .catch((err) => {
           console.log('Der Fehler ist ', err);

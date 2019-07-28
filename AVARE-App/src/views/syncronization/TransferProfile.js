@@ -21,12 +21,11 @@
 */import React, { Component } from 'react';
 import { View, Text, TextInput, Button, StyleSheet, NetInfo, } from 'react-native';
 import { connect } from 'react-redux'
-//import { setProfile, loadPreferences, setTime} from '../../redux/modules/communication/actions'
 import { setProfile, loadPreferences, setTime} from 'avare-sync-client'
-import {onConnectivityChange} from '../../functions/Connection'
-import {getISODate} from '../../functions/getIsoDate'
+import { onConnectivityChange } from '../../functions/Connection'
+import { getISODate } from '../../functions/getIsoDate'
 
-import {writeJsonFile} from '../../storage/RNFSControl' //'../features/Storage/RNFSControl';
+import {writeJsonFile} from '../../storage/RNFSControl'
 
 
 

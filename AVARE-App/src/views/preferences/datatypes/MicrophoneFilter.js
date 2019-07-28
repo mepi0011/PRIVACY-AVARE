@@ -45,9 +45,9 @@ class MicrophoneFilter extends React.Component {
   setMicrophoneFilter(setting){
     if (this.state.context == "category") {
       this.props.dispatch(filterMicrophoneCategory(this.state.contextID, setting));
-      console.log('Mic setting: ' + setting)
+//      console.log('Mic setting: ' + setting)
     } else {
-      console.log('setting app mic filter to ' + setting);
+//      console.log('setting app mic filter to ' + setting);
       this.props.dispatch(filterMicrophoneApp(this.state.contextID, setting));
     }
     writeJsonFile();
@@ -67,7 +67,6 @@ class MicrophoneFilter extends React.Component {
               value = { isSwitchOn }
               onValueChange={() =>
                 { this.setState({ isSwitchOn: !isSwitchOn});
-//                console.log('current State: ' + this.state.isSwitchOn);
                  if (this.state.isSwitchOn) {
                     this.setMicrophoneFilter('none');
                  } else {

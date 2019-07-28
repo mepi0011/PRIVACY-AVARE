@@ -45,9 +45,9 @@ class LocationFilter extends React.Component {
   setLocationFilter(value){
     if (this.state.context == "category") {
       this.props.dispatch(filterLocationCategory(this.state.contextID, value));
-      console.log('Location contextID: ' + this.state.contextID)
+//      console.log('Location contextID: ' + this.state.contextID)
     } else {
-      console.log('setting location filter to ' + value);
+//      console.log('setting location filter to ' + value);
       this.props.dispatch(filterLocationApp(this.state.contextID, value));
     }
     writeJsonFile();
