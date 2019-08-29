@@ -19,8 +19,7 @@
         See the License for the specific language governing permissions and
         limitations under the License.
 */
-//TODO: I think, App shouldn't be imported here
-import { store } from '../../App'
+import { store } from '../redux/store'
 
 import {
     ToastAndroid,
@@ -33,19 +32,25 @@ import { loadCategories } from '../redux/modules/categories/actions';
 import { loadApps } from '../redux/modules/apps/actions';
 
 
+//export const onLoad = () => {
+//  return readJsonFile().then((contents) => {
+//    preferenceObject = JSON.parse(contents);
+//    store.dispatch(setProfile(preferenceObject.profile));
+//    store.dispatch(setTime(preferenceObject.time));
+//    store.dispatch(loadApps(preferenceObject.apps));
+//    store.dispatch(loadCategories(preferenceObject.categories));
+//    ToastAndroid.show('Json loaded', ToastAndroid.SHORT);
+//    return true;
+//  });
+//}
 export const onLoad = () => {
-    return readJsonFile()
-        .then((contents) => {
-            preferenceObject = JSON.parse(contents);
-            store.dispatch(setProfile(preferenceObject.profile));
-            store.dispatch(setTime(preferenceObject.time));
-            store.dispatch(loadApps(preferenceObject.apps));
-            store.dispatch(loadCategories(preferenceObject.categories));
-
-            ToastAndroid.show('Json loaded', ToastAndroid.SHORT);
-            return true;
-
-        })
-
-
+  return readJsonFile().then((contents) => {
+    preferenceObject = JSON.parse(contents);
+    store.dispatch(setProfile(preferenceObject.profile));
+    store.dispatch(setTime(preferenceObject.time));
+    store.dispatch(loadApps(preferenceObject.apps));
+    store.dispatch(loadCategories(preferenceObject.categories));
+    ToastAndroid.show('Json loaded', ToastAndroid.SHORT);
+    return true;
+  });
 }

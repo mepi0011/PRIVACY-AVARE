@@ -24,7 +24,7 @@ import React from 'react'
 import { View } from 'react-native';
 // import { StackActions, NavigationActions } from 'react-navigation';
 
-import { withTheme, Button, Text, Title, Paragraph } from 'react-native-paper';
+import { withTheme, Button, Title, Paragraph } from 'react-native-paper';
 import { addCategory } from '../../redux/modules/categories/actions';
 import initialPreferences from '../../storage/initalPreferences';
 import { writeJsonFile } from '../../storage/RNFSControl';
@@ -33,45 +33,36 @@ import uuid from 'uuid/v4';
 import AvareBox from '../../packages/AvareBox';
 import AsyncStorage from '@react-native-community/async-storage';
 
-
-//TODO: hmmm... as the app should also work offline only, we need to think about the purpose of getProfile
-// import { getProfile } from '../persistence/modules/communication/actions';
-
-
 class WelcomeScreen extends React.Component {
 
     constructor(props) {
         super(props);
     };
 
-    //loadProfile = async function () {
-    //    console.log('...loading');
-    //    // await this.props.dispatch(getProfile())
-    //    // this.props.navigation.dispatch(resetHome);
-    //};
-
     initProfile() {
         console.log('Initialize new profile');
 
         AvareBox.initPlugins();
-
+        console.log('create categories')
         // TODO: Having to manually generate an ID and writeJsonFile is not DRY. Best practice for this?
         initialPreferences.categories.forEach((category) => {
             category._id = uuid();
             this.props.dispatch(addCategory(category));
         });
+        console.log('write file')
         writeJsonFile();
 
-        AsyncStorage.getItem('appIntro').then((value) => {
-          if (value == "introDone") {
-            console.log('Async read in /LoadingScreen: --> intro already done, skip')
-            this.props.navigation.navigate('Main');
-          }
-          else {
-            console.log('Async read in /LoadingScreen: --> intro has to be done')
+        //AsyncStorage.getItem('appIntro').then((value) => {
+        //  if (value == "introDone") {
+        //    console.log('Async read in /LoadingScreen: --> intro already done, skip')
+        //    this.props.navigation.navigate('Main');
+        //  }
+        //  else {
+        //    console.log('Async read in /LoadingScreen: --> intro has to be done')
+        console.log('go to intro')
             this.props.navigation.navigate('Intro');
-          }
-        });
+        //  }
+        //});
     }
 
     render() {

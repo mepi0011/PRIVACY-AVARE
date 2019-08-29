@@ -117,7 +117,6 @@ class ListCategories extends React.Component {
               renderItem={({ item }) =>
                 <TouchableRipple
                   onPress={() => {
-                    //TODO: shorter Timeout or is it performance problem?
                     setTimeout(() => {
                       this.props.navigation.navigate('Category', { context: 'category', contextID: item._id, categoryName: item.name });
                     });
@@ -154,7 +153,6 @@ class ListCategories extends React.Component {
               renderItem={({ item }) =>
                 <TouchableRipple
                   onPress={() => {
-                    //TODO: shorter Timeout or is it performance problem?
                     setTimeout(() => {
                       this.props.navigation.navigate('Category', { context: 'category', contextID: item._id, categoryName: item.name });
                     });
@@ -182,17 +180,9 @@ class ListCategories extends React.Component {
           dismissable={false}>
           <Dialog.Title>Disclaimer</Dialog.Title>
           <Dialog.Content>
-            <Paragraph>Die App befindet sich im frühen Entwicklungsstadium</Paragraph>
+            <Paragraph>Die App befindet sich im frühen Entwicklungsstadium.</Paragraph>
           </Dialog.Content>
           <Dialog.Actions>
-            <Button
-              onPress={() => {
-                this.props.dispatch(dontShowAgain())
-                console.log("OK Button gedrückt.");
-              }}>
-              OK
-            </Button>
-
             <Button
               onPress={() => {
                 this.props.dispatch(dontShowAgain())
@@ -200,7 +190,7 @@ class ListCategories extends React.Component {
                 this._hideDisclaimer();
               }
               }>
-              don't show again
+              OK
               </Button>
           </Dialog.Actions>
         </Dialog>

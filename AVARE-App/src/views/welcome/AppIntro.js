@@ -6,9 +6,9 @@ import { withTheme, Button, Text, Title, Paragraph } from 'react-native-paper';
 import AppIntroSlider from 'react-native-app-intro-slider';
 import { connect } from 'react-redux';
 import Icon from 'react-native-ionicons';
-import { store } from '../../../App'
-import AsyncStorage from '@react-native-community/async-storage';
-import { hideAppIntro } from '../../redux/modules/disclaimer/action';
+//import { store } from '../../redux/store';
+//import AsyncStorage from '@react-native-community/async-storage';
+//import { hideAppIntro } from '../../redux/modules/disclaimer/action';
 
 // Eventuell statt Hintergrundbild einen LinearGradient verwenden
 //import LinearGradient from 'react-native-linear-gradient';
@@ -27,16 +27,18 @@ class AppIntro extends React.Component {
   //Festlegen der Funktionalitäten und Layouts der Elemente
 
   _onDone = () => {
-    this.setState({ showRealApp: true });
-    this._setIntroState();
+    this.props.navigation.navigate('Main')
+    //this.setState({ showRealApp: true });
+    //this._setIntroState();
 //    this.props.dispatch(hideAppIntro());
-    console.log('AppIntro.js/onDone has written in AS: introDone')
+    //console.log('AppIntro.js/onDone has written in AS: introDone')
   };
   _onSkip = () => {
-    this.setState({ showRealApp: true });
-    this._setIntroState();
+    this.props.navigation.navigate('Main')
+    //this.setState({ showRealApp: true });
+    //this._setIntroState();
 //    this.props.dispatch(hideAppIntro());
-    console.log('AppIntro.js/onSkip has written in AS: introDone')
+    //console.log('AppIntro.js/onSkip has written in AS: introDone')
   };
   _renderItem = (item) => {
     return (
@@ -89,12 +91,12 @@ class AppIntro extends React.Component {
 // TODO: Wert in AsyncStorage speichern und anfangs auslesen ob intro schonmal durchgelaufen ist.
 // Damit dann "showRealApp verändern und dadurch die untenstehende Logik speisen
 
-  _setIntroState = async () => {
-
-      console.log("AI Wert schreiben")
-      await AsyncStorage.setItem("appIntro", "introDone")
-      console.log('AI Wert in async Storage geschrieben')
-  }
+//  _setIntroState = async () => {
+//
+//      console.log("AI Wert schreiben")
+//      await AsyncStorage.setItem("appIntro", "introDone")
+//      console.log('AI Wert in async Storage geschrieben')
+//  }
 
 
 
@@ -102,13 +104,13 @@ class AppIntro extends React.Component {
 
   render() {
 
-    //If false show the Intro Slides
-    if (this.state.showRealApp) {
-      //Real Application
-      return(
-        this.props.navigation.navigate('Main')
-      );
-    } else {
+    ////If false show the Intro Slides
+    //if (this.state.showRealApp) {
+    //  //Real Application
+    //  return(
+    //    this.props.navigation.navigate('Main')
+    //  );
+    //} else {
       //Intro slides
       return (
         <AppIntroSlider
@@ -122,7 +124,7 @@ class AppIntro extends React.Component {
           renderDoneButton={this._renderDoneButton}
         />
       );
-    }
+    //}
   }
 }
 const styles = StyleSheet.create({
@@ -181,7 +183,7 @@ const slides = [
     key: 's2',
     title: 'Bequem Daten schützen',
     titleStyle: styles.title,
-    text: 'Füge Apps hinzu. Lege fest, welche Apps auf welche Daten zugreifen können. Genieße Datensicherheit.',
+    text: 'Füge Apps hinzu. Lege fest, welche Apps auf welche Daten zugreifen können.',
     textStyle: styles.text,
     image: require('../../../assets/Intro_2.png'), //Icon made by Freepik from www.flaticon.com, Icon made by geotatah from www.flaticon.com
     imageStyle: styles.image,

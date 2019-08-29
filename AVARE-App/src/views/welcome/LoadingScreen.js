@@ -20,11 +20,22 @@
         limitations under the License.
 */// initial screen: load local profile or go to welcome screen
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View } from 'react-native';
 import { withTheme, Title } from 'react-native-paper';
 import { connect } from 'react-redux';
-import { onLoad } from '../../storage/OnLoad';
-import { intro } from '../../storage/intro';
+import { store } from '../../redux/store'
+import {
+  ToastAndroid,
+} from 'react-native';
+
+//import { setProfile, setTime } from '../redux/modules/communication/actions';
+
+import { readJsonFile } from '../../storage/RNFSControl'
+import { loadCategories } from '../../redux/modules/categories/actions';
+import { loadApps } from '../../redux/modules/apps/actions';
+
+//import { onLoad } from '../../storage/OnLoad';
+//import { intro } from '../../storage/intro';
 import AsyncStorage from '@react-native-community/async-storage';
 
 
@@ -32,45 +43,39 @@ class LoadingScreen extends React.Component {
   constructor(props) {
     super(props);
 
-    // for now, always delete available file in the beginning, should be probably a reset button somewhere else.
-    //deleteJsonFile();
 
     //is store active? If not, search local file
-
-
     if (this.props.categories != undefined && this.props.categories.length != 0) {
       this.props.navigation.navigate('Main')
     } else {
-      // check whether local profile is available
+      readJsonFile().then((contents) => {
+        preferenceObject = JSON.parse(contents);
+        //        store.dispatch(setProfile(preferenceObject.profile));
+        //        store.dispatch(setTime(preferenceObject.time));
+        store.dispatch(loadApps(preferenceObject.apps));
+        store.dispatch(loadCategories(preferenceObject.categories));
+        console.log("Json loaded:")
+        return true;
+      }).then((result) => {
+        //        AsyncStorage.getItem('appIntro').then((value) => {
+        //         if (value == "introDone") {
+        //          console.log('Async read in /LoadingScreen: --> intro already done, skip')
+        this.props.navigation.navigate('Main');
+        //       }
+        //      else {
+        //        console.log('Async read in /LoadingScreen: --> intro has to be done')
+        //        this.props.navigation.navigate('Intro');
+        //     }
+        //   });
 
-      intro();
-      onLoad()
-        .then((result) => {
-          console.log("Test: " + result);
-
-          AsyncStorage.getItem('appIntro').then((value) => {
-            if (value == "introDone") {
-              console.log('Async read in /LoadingScreen: --> intro already done, skip')
-              this.props.navigation.navigate('Main');
-            }
-            else {
-              console.log('Async read in /LoadingScreen: --> intro has to be done')
-              this.props.navigation.navigate('Intro');
-            }
-          });
-
-//          if (result) {
-//            this.props.navigation.navigate('Intro');
-//          }
-        })
-        .catch((err) => {
-          console.log('Der Fehler ist ', err);
-          // Go to welcome screen
-          console.log('No Profile, go to welcome');
-          this.props.navigation.navigate('Welcome');
+      }).catch((err) => {
+        console.log('Error occurred:', err);
+        // Go to welcome screen
+        console.log('No Profile, go to welcome');
+        this.props.navigation.navigate('Welcome');
 
 
-        })
+      })
     }
   }
 
@@ -87,9 +92,7 @@ class LoadingScreen extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    profile: state.communication.profile,
     disclaimer: state.disclaimer
-
   }
 }
 

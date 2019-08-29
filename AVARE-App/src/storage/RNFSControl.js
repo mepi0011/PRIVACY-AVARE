@@ -23,7 +23,7 @@
 import RNFS from 'react-native-fs'
 import { ToastAndroid } from 'react-native'
 
-import { store } from '../../App';
+import { store } from '../redux/store'
 import { resetApps } from '../redux/modules/apps/actions';
 import { resetCategories } from '../redux/modules/categories/actions';
 
@@ -37,8 +37,8 @@ export function writeJsonFile() {
     var path = RNFS.DocumentDirectoryPath + '/preferences.json';
     var storeState = store.getState();
     var jsonObject = {
-        profile: storeState.communication.profile,
-        time: storeState.communication.time,
+        //profile: storeState.communication.profile,
+        //time: storeState.communication.time,
         apps: storeState.apps,
         categories : storeState.categories,
     }
@@ -129,18 +129,3 @@ export function basic() {
             console.log(err.message, err.code);
         })
 }
-
-/*
-export function fileCreation() {
-    //var RNFS = require('react-native-fs');
-    var path = RNFS.DocumentDirectoryPath + '/test2.txt';
-
-    RNFS.writeFile(path, 'TEST TEST', 'utf8')
-        .then((success) => {
-            console.log('File WRITTEN!');
-        })
-        .catch((err) => {
-            console.log(err.message)
-        })
-    }
-    */
