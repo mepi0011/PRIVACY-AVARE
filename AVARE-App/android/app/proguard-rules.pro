@@ -15,6 +15,10 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-dontwarn com.sothree.**
+-keep class com.sothree.**
+-keep interface com.sothree.**
+
 -keep   class com.amap.api.maps.**{*;}
 -keep   class com.autonavi.**{*;}
 -keep   class com.amap.api.trace.**{*;}
