@@ -4,14 +4,14 @@ apply plugin: 'com.android.application'
 
 android {
     //compileSdkVersion 25
-    compileSdkVersion 27
+    compileSdkVersion rootProject.ext.compile_sdk_version
     //buildToolsVersion "25.0.2"
-    buildToolsVersion "27.0.3"
+    buildToolsVersion rootProject.ext.build_tool_version
     defaultConfig {
         applicationId "app.avare"
-        minSdkVersion 21
+        minSdkVersion rootProject.ext.min_sdk_version
         //targetSdkVersion 22
-        targetSdkVersion 26
+        targetSdkVersion rootProject.ext.target_sdk_version
         versionCode 5
         versionName "0.0.5"
         android {
