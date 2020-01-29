@@ -27,16 +27,14 @@ import org.json.JSONObject;
 
 public class JSONParser {
     private FileReader fr;
-    private FileWriter writer;
     private String config;
     private JSONObject configJSON;
 
     public JSONParser() {
         this.fr = new FileReader();
-        this.writer = new FileWriter("exampleSettings.json"); //test file
-        this.config = fr.readFile("exampleSettings.json"); //test file
+        this.config = fr.readFile("preferences.json");
         try {
-            this.configJSON = new JSONObject(config);
+            this.configJSON = new JSONObject(this.config);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -45,17 +43,25 @@ public class JSONParser {
     }
 
     private String getPackageName() {
-        Log.i("JSON PARSER", "Trying to get package name..");
+        Log.i("JSON PARSER", "Trying to get package name...");
         try {
             throw new NullPointerException();
         } catch (NullPointerException e) {
             StackTraceElement[] stes = e.getStackTrace();
+            //e.printStackTrace();
+            Log.i("JSON PARSER ST", Log.getStackTraceString(e));
             for (StackTraceElement ste : stes) {
                 String className = ste.getClassName();
                 int pos = className.lastIndexOf('.');
                 String packageName = className.substring(0, pos);
                 Log.i("JSON PARSER", "packageName: " + packageName);
                 if (!packageName.startsWith("app.avare") && !packageName.startsWith("android")) {
+                    //Workaround to allow AVARE to read the config settings for a specific App
+                    // X is the obfuscated name of the app
+                    if(packageName.equals("X")) {
+                        Log.i("JSON PARSER", "found (obfuscated) package name: " + "com.whatsapp");
+                        return "com.whatsapp";
+                    }
                     Log.i("JSON PARSER", "found package name: " + packageName);
                     return packageName;
                 }
@@ -188,93 +194,6 @@ public class JSONParser {
             e.printStackTrace();
         }
         return 0;
-    }
-
-    /**
-     * Reads the microphone preference from JSON file.
-     *
-     * @return the specified state as a String
-     */
-    public String getMicrophoneState () {
-        try {
-            JSONObject settings = this.getSettings();
-            JSONObject mic = settings.getJSONObject("mic");
-            if (mic.getString("status").equals("enabled")) {
-                return "enabled";
-            } else {
-                JSONObject blockSettings = mic.getJSONObject("blockSettings");
-                return blockSettings.getString("blockStatus");
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    /**
-     * Reads the camera preference from JSON file.
-     *
-     * @return the specified state as a String
-     */
-    public String getCameraState () {
-        try {
-            JSONObject settings = this.getSettings();
-            JSONObject cam = settings.getJSONObject("camera");
-            if (cam.getString("status").equals("enabled")) {
-                return "enabled";
-            } else if(cam.getString("status").equals("filtered")) {
-                return "filtered";
-            }  else {
-                JSONObject blockSettings = cam.getJSONObject("blockSettings");
-                return blockSettings.getString("blockStatus");
-            }
-
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-
-    private void setBlockState(JSONObject root, String status) {
-        root.remove("blockStatus");
-        try {
-            root.put("blockStatus", status);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        writer.writeFile(configJSON.toString());
-    }
-
-    private JSONObject getBlockSettings(String name) {
-        try {
-            JSONObject settings = this.getSettings();
-            JSONObject obj = settings.getJSONObject(name);
-            return obj.getJSONObject("blockSettings");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    /**
-     * Changes the block setting for the camera attribute.
-     *
-     * @param state new value
-     */
-    public void setCameraState (String state) {
-        setBlockState(getBlockSettings("camera"), state);
-    }
-
-
-    /**
-     * Changes the block setting for the microphone attribute.
-     *
-     * @param state new value
-     */
-    public void setMicrophoneState (String state) {
-        setBlockState(getBlockSettings("mic"), state);
     }
 
     /*

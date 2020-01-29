@@ -73,7 +73,7 @@ dependencies {
     compile 'com.jonathanfinerty.once:once:1.0.3'
     compile 'com.kyleduo.switchbutton:library:1.4.6'
     // react-native
-    compile 'com.facebook.react:react-native:+'
+    implementation 'com.facebook.react:react-native:+'
     compile project(':react-native-contacts')
     compile project(':react-native-fs')
     compile project(':react-native-calendar-events')
